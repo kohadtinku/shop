@@ -11,7 +11,7 @@ import RelatedSlider from "../components/sliders/RelatedSlider";
 import ProductSummary from "../components/product/ProductSummary";
 import Services from "../components/common/Services";
 import { ToastContainer, toast } from "react-toastify";
-import ReactImageMagnify from "react-image-magnify";
+// import ReactImageMagnify from "react-image-magnify";
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -89,10 +89,10 @@ const ProductDetails = () => {
                   </div>
                 ))}
               </div>
-              {/* <figure className="prod_details_img">
+              <figure className="prod_details_img">
                                 <img src={previewImg} alt="product-img" />
-                            </figure> */}
-                            <div className="prod_details_img">
+                            </figure>
+                            {/* <div className="prod_details_img">
       <ReactImageMagnify
         {...{
           smallImage: {
@@ -111,7 +111,7 @@ const ProductDetails = () => {
         }}
         className="custom_magnify" // Add a custom class for styling purposes
       />
-    </div>
+    </div> */}
     </div>
 
             {/*=== Product Details Right-content ===*/}
