@@ -1,0 +1,211 @@
+#product_details {
+    padding-top: 6rem;
+}
+
+.prod_details_wrapper {
+    grid-template-columns: 1fr 0.7fr;
+    gap: 4rem;
+
+    @include devices(lg) {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+.prod_details_left_col {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    gap: 1rem;
+
+    @include devices(sm) {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+.prod_details_tabs {
+    display: grid;
+    gap: 1rem;
+
+    .tabs_item {
+        @include dimension(6rem, 6rem);
+        @include bordered(2px, rgba($color: #ffffff, $alpha: 0.2));
+        border-radius: 3px;
+        padding: 0.5rem;
+        cursor: pointer;
+        @include transition(border-color, 0.2s);
+
+        &.active {
+            border-color: #eee;
+        }
+
+        img {
+            @include img-fit;
+        }
+
+        @include devices(sm) {
+            @include dimension();
+            padding: 0.3rem;
+        }
+    }
+
+    @include devices(sm) {
+        display: flex;
+        gap: 0.4rem;
+    }
+}
+
+.prod_details_img {
+
+    img {
+        @include img-fit;
+    }
+
+    @include devices(sm) {
+        grid-row: 1;
+    }
+}
+// .prod_details_img img:nth-child(1){
+//     animation: rotation 8s infinite linear;
+// }
+// @keyframes rotation{
+//    from{
+//     transform: rotateX(0deg);
+//    } 
+//    to{
+//     transform: rotateY(-180deg);
+//    }
+// }
+
+
+// .prod_details_img img {
+//     transition: transform 0.3s ease;
+// }
+
+// .prod_details_img img:hover{
+//     transform: rotate(10deg); /* Adjust the angle as needed */
+// }
+
+.prod_details_right_col {
+    .separator {
+        @include margin-y(2.2rem, 2.2rem);
+    }
+}
+
+.prod_details_info {
+    @include margin-y(0.6rem, 1.2rem);
+    font-weight: 600;
+}
+
+.prod_details_ratings {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    a {
+        opacity: 0.8;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.prod_details_price {
+    @include flexbox(space-between, center);
+
+    .price {
+        font-size: 2rem;
+    }
+
+    .del_price {
+        font-size: 1.3rem;
+    }
+
+    .saved_price {
+        font-weight: 500;
+        color: green;
+        @include margin-y(0.8rem, 0.4rem);
+    }
+
+    .tax_txt {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+    }
+
+    .badge {
+        background-color: green;
+        border-radius: 3px;
+        padding: 0.5rem 0.7rem;
+    }
+
+}
+
+.prod_details_offers {
+
+    h4 {
+        font-weight: 600;
+    }
+
+    ul {
+        display: flex;
+        gap: 0.8rem;
+        margin-top: 1.5rem;
+
+        li {
+            @include bordered(1px, var(--text-muted));
+            background-color: #cbd5e1;
+            border-radius: 3px;
+            font-size: 0.9rem;
+            padding: 0.6rem;
+        }
+    }
+}
+
+.prod_details_buy_btn {
+    .btn {
+        width: 200px;
+    }
+}
+.custom_magnify{
+    // cursor: zoom-in; /* Set cursor to zoom-in */
+    cursor: crosshair;
+    width: 600px !important;
+    height: 600px !important;
+    font-size: 0px;
+    position: relative;
+    user-select: none;
+
+}
+/* Set background color of the large image to white */
+.custom_magnify .ReactImageMagnifyLargeImage {
+    background-color: white;
+    width: 300px !important;
+    height: 400px !important;
+  }
+
+  .custom_magnify {
+    border: 1px solid #ccc; /* Add a border around the magnified image */
+  }
+  
+  /* Style the hint (tooltip) */
+  .custom_magnify .ReactImageMagnifyHint {
+    background-color: rgba(255, 255, 255, 0.9); /* Set hint background color */
+    border: 1px solid #ccc; /* Add a border around the hint */
+    color: #333; /* Set hint text color */
+    font-size: 14px; /* Adjust hint font size */
+    height: 700px;
+    width: 600px;
+  }
+  
+  /* Style the cursor */
+  .custom_magnify .ReactImageMagnifyZoomLens {
+    border: 1px solid #ccc; /* Add a border around the zoom lens */
+    cursor: zoom-in; /* Set cursor to zoom-in */
+  }
+  
+  /* Style the large image */
+  .custom_magnify .ReactImageMagnifyLargeImage {
+    background-color: white; /* Set background color of the large image to white */
+  }
+  

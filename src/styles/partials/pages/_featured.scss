@@ -1,0 +1,43 @@
+#featured {
+    margin-top: 3rem;
+}
+
+.featured_slides {
+    text-align: center;
+    overflow: hidden;
+
+    @include devices(md) {
+        width: 16rem;
+    }
+}
+
+.featured_swiper {
+    @include padding-y(3rem !important, 3rem !important);
+}
+
+.featured_img {
+    @include margin-y(2rem, 2rem);
+    overflow: hidden;
+
+    img {
+        width: 55%;
+        @include img-fit;
+    }
+}
+.featured_img img{
+    width: 50% !important;
+}
+
+// .featured_img img:nth-child(1){
+//     // animation: rotation 5s infinite linear;
+
+    
+// }
+// @keyframes rotation{
+//    from{
+//     transform: rotateX(0deg);
+//    } 
+//    to{
+//     transform: rotateY(-180deg);
+//    }
+// }
