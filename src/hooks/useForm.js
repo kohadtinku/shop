@@ -21,6 +21,9 @@ const useForm = () => {
     const handleFormSubmit = (e) => {
         const loggedUserInfo = inputValues.mail.split('@')[0].toUpperCase();
 
+        localStorage.setItem('userData', JSON.stringify(loggedUserInfo));
+
+
         e.preventDefault();
         setInputValues({});
         setFormUserInfo(loggedUserInfo);

@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { displayMoney } from '../../helpers/utils';
 import cartContext from '../../contexts/cart/cartContext';
 import useActive from '../../hooks/useActive';
-// import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 
-// import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const ProductCard = (props) => {
@@ -23,8 +23,8 @@ const ProductCard = (props) => {
         addItem(item);
         // toast("Added To Cart");
         // console.log(toast);
-alert("Added to cart")
-// toast.success(`Added to cart, ${item.id}!`);
+// alert("Added to cart")
+toast.success(`Added to cart, ${id}!`);
 
 
         handleActive(id);
@@ -65,18 +65,21 @@ alert("Added to cart")
                         type="button"
                         className={`btn products_btn ${activeClass(id)}`}
                         onClick={handleAddItem}
+                        // id={id}
                     >
-                        {active ? 'Added' : 'Buy Now'}
-                    {/* <ToastContainer  position="top-right"
-         autoClose={3000}
+                        {/* {active ? 'Added' : 'Buy Now'} */}
+                        <h5>Buy Now</h5>
+                    <ToastContainer  position="top-right"
+         autoClose={2000}
          hideProgressBar={false}
          newestOnTop={false}
-         closeOnClick
+         closeOnClick={true}
          rtl={false}
          limit={1}
          pauseOnFocusLoss
          draggable
-         pauseOnHover /> */}
+         id={id}
+         pauseOnHover />
                     </button>
 
                 </div>
