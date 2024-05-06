@@ -6,7 +6,7 @@
   width: 100%;
 //   @include padding-y(0.8rem, 0.8rem);    
   @include transition(background-color, 0.2s, linear);
-  background-color: hsla(11,100%,62.2%,1);
+  background-color: #f3f8ff;
 
   color: #eee;
   &.sticky {
@@ -63,7 +63,7 @@
     position: absolute;
     top: 0;
     right: -20px;
-    background-color: var(--main-color-2);
+    background-color: black;
     border-radius: 50%;
   }
 }
@@ -87,7 +87,7 @@
       letter-spacing: 0.5px;
 
       a {
-        color: var(--main-color);
+        color:  black;
         opacity: 0.95;
 
         &:hover {
@@ -165,7 +165,7 @@
     left: 437px;
     background-color: rgb(219, 226, 226);
     height:300px;
-    width: fit-content;
+    width: 52vw;
     border: 1px solid black;
     z-index: 999;
     overflow-y: auto;
@@ -187,13 +187,13 @@
       }
       .suggestion_bar {
         left: 0px;
+        width: 390px;
       }
 
   }
 @media screen and (max-width: 375px) {
     .search_input {
-        width: 27vw;
-    
+        width: 27vw;    
       }
 
   }

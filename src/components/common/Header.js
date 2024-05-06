@@ -166,45 +166,6 @@ const Header = () => {
   </div>
 )}
 
-  
-
-
-{/* 
-      {searchQuery && (
-        <div
-          className="searchfield"
-          style={{
-            color: "red",
-            background: "black",
-            padding: "10px",
-            marginBottom: "20px",
-          }}
-        >
-          <ul style={{ listStyleType: "none", padding: 0 }}>
-            {productsData
-              .filter((item) => {
-                return search.toLowerCase() === ""
-                  ? item
-                  : item.title.toLowerCase().includes(search);
-              })
-              .slice(0, 10)
-              .map((item) => (
-                <li
-                  key={item.id}
-                  style={{ marginBottom: "5px", cursor: "pointer" }}
-                  onClick={() => onSearch(item.title)}
-                >
-                  <Link
-                    to={`${item.path}${item.id}`}
-                    style={{ color: "white", textDecoration: "none" }}
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-          </ul>
-        </div>
-      )} */}
     </>
   );
 };
