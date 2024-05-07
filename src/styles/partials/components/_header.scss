@@ -8,7 +8,7 @@
   @include transition(background-color, 0.2s, linear);
   background-color: #f3f8ff;
 
-  color: #eee;
+  color: #000000;
   &.sticky {
     // background-color: var(--black-color);
     // background-color:rgb(230, 44, 44);
@@ -74,7 +74,7 @@
     top: 50px;
     right: 0;
     width: 17.5rem;
-    background-color: var(--bg-color-2);
+    background-color: #f3f8ff;
     padding: 1.4rem;
     font-size: 0.9rem;
     border-radius: 3px;
@@ -110,6 +110,7 @@
       &:hover {
         color: #eee;
         border-color: #eee;
+        background-color: aliceblue;
       }
     }
 

@@ -6,19 +6,21 @@ import TopProducts from '../components/product/TopProducts';
 import Services from '../components/common/Services';
 import TopBarProducts from '../components/product/TopBarProducts';
 import SwipperSlider from '../components/sliders/SwipperSlider';
+import OurProducts from '../components/product/OurProducts';
 
 
 const Home = () => {
 
     return (
         <main>
-{/* <section className='topbarproducts' style={{background:"#bcc8eb",height:"150px"}}>
+<section className='topbarproducts' >
     <TopBarProducts/>
-</section> */}
+</section>
             <section id="products" className="section">
                 <div className="container">
                     {/* <SectionsHead heading="Top Products" /> */}
-                    <TopProducts />
+                    {/* <TopProducts /> */}
+                    <OurProducts/>
                 </div>
             </section>
             <section id="hero">
