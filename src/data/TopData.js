@@ -38,7 +38,7 @@ const topdata = [
   {
     id: 6,
     title: "Neckbands",
-    img: "/images/products/sonyxb400-1.png",
+    img: "/images/products/jbl200bt-1.png",
     path: "/product-details/",
     href: "/neckband",
   },
