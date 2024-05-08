@@ -9,7 +9,7 @@ const OurProducts = () => {
 
     return (
         <div className="our-products">
-            <h2>Our Products</h2>
+            <h2 style={{textAlign:"center"}}>Our Products</h2>
            
       <div className="wrapper products_wrapper">
         {/* {products.slice(0, 11).map((item) => ( */}
