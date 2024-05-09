@@ -18,9 +18,7 @@ const RouterRoutes = () => {
 
   return (
     <>
-      <div className="bread" style={{marginTop:"50px"}}>
-        <BreadCrumbs />
-      </div>
+    
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mobile" element={<Mobile />} />

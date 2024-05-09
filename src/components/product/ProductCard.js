@@ -69,7 +69,7 @@ toast.success(`Added to cart, ${id}!`);
                     >
                         {/* {active ? 'Added' : 'Buy Now'} */}
                         <h5>Buy Now</h5>
-                    <ToastContainer  position="top-right"
+                    {/* <ToastContainer  position="top-right"
          autoClose={2000}
          hideProgressBar={false}
          newestOnTop={false}
@@ -79,7 +79,7 @@ toast.success(`Added to cart, ${id}!`);
          pauseOnFocusLoss
          draggable
          id={id}
-         pauseOnHover />
+         pauseOnHover /> */}
                     </button>
 
                 </div>

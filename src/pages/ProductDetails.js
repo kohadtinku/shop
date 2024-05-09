@@ -166,9 +166,9 @@ const ProductDetails = () => {
 
               <div className="prod_details_buy_btn">
                 <button type="button" className="btn" onClick={handleAddItem}>
-                  Add to cart
+              Buy Now
                 </button>
-                <ToastContainer />
+                {/* <ToastContainer /> */}
               </div>
             </div>
           </div>

@@ -120,9 +120,10 @@ import { Link } from 'react-router-dom';
 import { BsArrowRight, BsExclamationCircle } from 'react-icons/bs';
 import productsData from '../../data/productsData';
 import ProductCard from '../product/ProductCard';
-import FilterBar from '../filters/FilterBar';
 import filtersContext from '../../contexts/filters/filtersContext';
 import EmptyView from '../common/EmptyView';
+import CustomFilter from '../filters/CustomFilter';
+import FilterBar from '../filters/FilterBar';
 
 const Mobile = () => {
   const { allProducts } = useContext(filtersContext);
@@ -137,7 +138,8 @@ const Mobile = () => {
   return (
     <>
       <section id="all_products" className="section">
-        <FilterBar />
+        {/* <CustomFilter /> */}
+        <FilterBar/>
         <div className="container">
           {
             mobileProducts.length ? (

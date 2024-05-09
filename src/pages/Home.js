@@ -7,14 +7,16 @@ import Services from '../components/common/Services';
 import TopBarProducts from '../components/product/TopBarProducts';
 import SwipperSlider from '../components/sliders/SwipperSlider';
 import OurProducts from '../components/product/OurProducts';
+import TopSlider from '../components/sliders/TopSlider';
 
 
 const Home = () => {
 
     return (
         <main>
-<section className='topbarproducts' >
-    <TopBarProducts/>
+<section className='topbarproducts' style={{display:"flex",alignItems:"center",justifyContent:"center",marginTop:"100px",textAlign:"center"}}>
+    {/* <TopBarProducts/> */}
+    <TopSlider/>
 </section>
             <section id="products" className="section">
                 <div className="container">
