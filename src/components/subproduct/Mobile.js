@@ -124,6 +124,7 @@ import filtersContext from '../../contexts/filters/filtersContext';
 import EmptyView from '../common/EmptyView';
 import CustomFilter from '../filters/CustomFilter';
 import FilterBar from '../filters/FilterBar';
+import MainFilter from '../../MainFilter';
 
 const Mobile = () => {
   const { allProducts } = useContext(filtersContext);
@@ -137,10 +138,11 @@ const Mobile = () => {
 
   return (
     <>
-      <section id="all_products" className="section">
+      <section id="custom_products" className="custom_products" style={{display:"flex",marginTop:"100px"}}>
         {/* <CustomFilter /> */}
-        <FilterBar/>
-        <div className="container">
+        {/* <FilterBar/> */}
+        <MainFilter/>
+        {/* <div className="container">
           {
             mobileProducts.length ? (
               <div className="wrapper products_wrapper">
@@ -158,16 +160,16 @@ const Mobile = () => {
               />
             )
           }
-        </div>
+        </div> */}
       </section>
-      <div
+      {/* <div
         className="card products_card browse_card"
         style={{ height: "200px", color: "red" }}
       >
         <Link to="/all-products">
           Browse All <br /> Products <BsArrowRight />
         </Link>
-      </div>
+      </div> */}
     </>
   );
 }

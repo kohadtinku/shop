@@ -307,11 +307,11 @@ const FilterBarOptions = () => {
                     </div>
                 </div>
 
-                <div className="apply_button">
+                {/* <div className="apply_button">
                     <button type="button" className="btn" onClick={handleApplyFilters}>
                         Apply
                     </button>
-                </div>
+                </div> */}
             </div>
         </>
     );

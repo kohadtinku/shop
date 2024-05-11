@@ -40,7 +40,7 @@ const CustomFilter = () => {
           </button>
         </div>
       )}
-      <div className="customDiv" style={{display:"flex",flexDirection:"column",gap:"2rem",padding:"2rem"}}>
+      <div className="customDiv" >
         <div className={`sort_options ${isMobSortVisible ? "show" : ""}`}>
           <div className="sort_head">
             <h3 className="title">Sort By</h3>

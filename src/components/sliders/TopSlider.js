@@ -57,6 +57,8 @@ import topdata from '../../data/TopData';
 
 const TopSlider = () => {
   return (
+    
+
     <Swiper
       slidesPerView={1}
       spaceBetween={1}
@@ -82,7 +84,7 @@ const TopSlider = () => {
         },
       }}
       className="custom-swiper" // Change the class name to 'custom-swiper'
-    >
+         >
       {topdata.map((item) => (
         <SwiperSlide key={item.id} className="custom-swiper-slide"> {/* Change the class name to 'custom-swiper-slide' */}
           <div className="custom_product">
@@ -96,6 +98,7 @@ const TopSlider = () => {
         </SwiperSlide>
       ))}
     </Swiper>
+   
   );
 };
 

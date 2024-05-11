@@ -50,25 +50,13 @@ const CustomFiltersProvider = ({ children }) => {
     /*==== Sorting ====*/
     if (state.sortedValue) {
       switch (state.sortedValue) {
-        // case 'Latest':
-        //     updatedProducts = updatedProducts.slice(0, 6).map(item => item);
-        //     break;
-
-        // case 'Featured':
-        //     updatedProducts = updatedProducts.filter(item => item.tag === 'featured-product');
-        //     break;
-
-        // case 'Top Rated':
-        //     updatedProducts = updatedProducts.filter(item => item.rateCount > 4);
-        //     break;
-
-        case "Price(Lowest First)":
+        case "Low - High":
           updatedProducts = updatedProducts.sort(
             (a, b) => a.finalPrice - b.finalPrice
           );
           break;
 
-        case "Price(Highest First)":
+        case "High - Low":
           updatedProducts = updatedProducts.sort(
             (a, b) => b.finalPrice - a.finalPrice
           );
