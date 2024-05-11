@@ -93,7 +93,7 @@ const TopSlider = () => {
                 <img src={item.img} alt={item.title} style={{ height: '100px', width: '100px' }} />
               </a>
             </div>
-            <h3>{item.title}</h3>
+            <h3 style={{fontSize:"18px"}}>{item.title}</h3>
           </div>
         </SwiperSlide>
       ))}

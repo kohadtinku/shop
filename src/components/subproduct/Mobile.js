@@ -124,7 +124,7 @@ import filtersContext from '../../contexts/filters/filtersContext';
 import EmptyView from '../common/EmptyView';
 import CustomFilter from '../filters/CustomFilter';
 import FilterBar from '../filters/FilterBar';
-import MainFilter from '../../MainFilter';
+import MainFIlter from './subfilter/MainFilter';
 
 const Mobile = () => {
   const { allProducts } = useContext(filtersContext);
@@ -141,7 +141,7 @@ const Mobile = () => {
       <section id="custom_products" className="custom_products" style={{display:"flex",marginTop:"100px"}}>
         {/* <CustomFilter /> */}
         {/* <FilterBar/> */}
-        <MainFilter/>
+        <MainFIlter/>
         {/* <div className="container">
           {
             mobileProducts.length ? (

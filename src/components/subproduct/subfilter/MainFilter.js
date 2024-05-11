@@ -240,14 +240,14 @@
 
 
 import React, { useContext, useState, useEffect } from "react";
-import customContext from "./contexts/filters/customContext";
-import { displayMoney } from "./helpers/utils";
-import productsData from "./data/productsData";
-import ProductCard from "./components/product/ProductCard";
-import EmptyView from "./components/common/EmptyView";
+import customContext from "../../../contexts/filters/customContext";
+import { displayMoney } from "../../../helpers/utils";
+import productsData from "../../../data/productsData";
+import ProductCard from "../../product/ProductCard";
+import EmptyView from "../../common/EmptyView";
 import { BsExclamationCircle } from "react-icons/bs";
-import priceMenu from "./data/filterBarData";
-import './App.css'
+import priceMenu from "../../../data/filterBarData";
+import '../../../App.css'
 const MainFIlter = () => {
   const {
     sortedValue,
