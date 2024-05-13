@@ -1,13 +1,21 @@
 .customDiv {
   padding: 10px;
 }
-
+.custom_sort_menu{
+  padding: 10px;
+  border-radius: 10px;
+}
+.filter_menu{
+  padding: 10px;
+  border-radius: 10px;
+}
 @media screen and (max-width: 425px) {
   .custom_products {
     flex-direction: column; /* Fix typo and adjust flex direction */
   }
   .custom_sort_menu{
     width: 140px;
+    padding: 12px;
   }
   .customDiv{
     display: flex;
