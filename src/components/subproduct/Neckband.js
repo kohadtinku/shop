@@ -2,17 +2,9 @@
 
 
 import React, { useState, useEffect, useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { BsArrowRight, BsExclamationCircle } from 'react-icons/bs';
-import productsData from '../../data/productsData';
-import ProductCard from '../product/ProductCard';
+
 import filtersContext from '../../contexts/filters/filtersContext';
-import EmptyView from '../common/EmptyView';
-import CustomFilter from '../filters/CustomFilter';
-import FilterBar from '../filters/FilterBar';
-import MainFIlter from './subfilter/MainFilter';
-import EarFilter from './subfilter/EarFilter';
-import TvFilter from './subfilter/TvFilter';
+
 import NeckBandFilter from './subfilter/NeckBandFilter';
 
 const Neckband = () => {

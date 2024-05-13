@@ -79,12 +79,12 @@ const TopSlider = () => {
           spaceBetween: 15,
         },
         1024: {
-          slidesPerView: 7,
+          slidesPerView: 6,
           spaceBetween: 20,
         },
       }}
       className="custom-swiper" // Change the class name to 'custom-swiper'
-         >
+         style={{height:"180px",display:"flex",justifyContent:"center",alignItems:"center"}}>
       {topdata.map((item) => (
         <SwiperSlide key={item.id} className="custom-swiper-slide"> {/* Change the class name to 'custom-swiper-slide' */}
           <div className="custom_product">
