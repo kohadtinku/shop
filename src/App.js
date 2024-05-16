@@ -10,18 +10,18 @@ import { CustomFiltersProvider } from "./contexts/filters/customContext";
 const App = () => {
   return (
     <>
+    <CustomFiltersProvider>
       <CommonProvider>
         <FiltersProvider>
-          <CustomFiltersProvider>
             <CartProvider>
               <Header />
               <RouterRoutes />
               <Footer />
               <BackTop />
             </CartProvider>
-          </CustomFiltersProvider>
         </FiltersProvider>
       </CommonProvider>
+      </CustomFiltersProvider>
     </>
   );
 };

@@ -8,6 +8,7 @@ import TopBarProducts from "../components/product/TopBarProducts";
 import SwipperSlider from "../components/sliders/SwipperSlider";
 import OurProducts from "../components/product/OurProducts";
 import TopSlider from "../components/sliders/TopSlider";
+import MainSlider from "../components/sliders/MainSlider";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
           marginTop: "100px",
         }}
       >
+      {/* <MainSlider/> */}
         <div style={{display:"flex",
         justifyContent:"center",alignItems:"center","flexDirection":"column",gap:"2rem"}}>
           <h1>Categories</h1>

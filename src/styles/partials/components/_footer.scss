@@ -1,7 +1,8 @@
 #footer {
     // background-color: var(--black-color);
-    background-color: white;
+    // background-color: white;
     border: 1px solid black;
+    background: linear-gradient(#ffeb3b, #ff893b);
     @include padding-y(3rem, 2rem);
 
     .separator {

@@ -56,7 +56,7 @@ const CustomFilter = () => {
           <div className="separator"></div>
 
           <ul className="sort_menu">
-            {sortQualityMenu.map((item) => {
+            {sortQualityMenu?.map((item) => {
               const { id, title } = item;
               return (
                 <li
