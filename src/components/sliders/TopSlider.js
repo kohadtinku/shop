@@ -67,7 +67,7 @@ const TopSlider = () => {
       loop={true} // Enable infinite loop
       breakpoints={{
         320: {
-          slidesPerView: 2,
+          slidesPerView: 3,
           spaceBetween: 5,
         },
         480: {
@@ -90,10 +90,10 @@ const TopSlider = () => {
           <div className="custom_product">
             <div className="rounded">
               <a href={item.href}>
-                <img src={item.img} alt={item.title} style={{ height: '100px', width: '100px' }} />
+                <img src={item.img} className='custom_img' alt={item.title} style={{ height: '100px', width: '100px' }} />
               </a>
             </div>
-            <h3 style={{fontSize:"18px"}}>{item.title}</h3>
+            <h3 className='c-text' style={{fontSize:"18px"}}>{item.title}</h3>
           </div>
         </SwiperSlide>
       ))}

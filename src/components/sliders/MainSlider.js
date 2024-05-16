@@ -11,6 +11,7 @@ import '../../styles/mainslider.css';
 
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+import sliderData from '../../data/sliderData';
 
 const MainSlider=()=> {
   return (
@@ -24,9 +25,13 @@ const MainSlider=()=> {
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="customSwiper"
       >
-        <SwiperSlide className="customSwiperSlide">Slide 1</SwiperSlide>
-        <SwiperSlide className="customSwiperSlide">Slide 2</SwiperSlide>
-        <SwiperSlide className="customSwiperSlide">Slide 3</SwiperSlide>
+         {sliderData.map(item => (
+        <SwiperSlide key={item.id}>
+          <a href={item.path}>
+            <img src={item.img} alt={`Slide ${item.id}`} />
+          </a>
+        </SwiperSlide>
+      ))}
 
       </Swiper>
     </>
