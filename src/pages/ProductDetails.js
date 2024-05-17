@@ -90,9 +90,9 @@ const ProductDetails = () => {
                 ))}
               </div>
               <figure className="prod_details_img">
-                                <img src={previewImg} alt="product-img" />
-                            </figure>
-                            {/* <div className="prod_details_img">
+                <img src={previewImg} alt="product-img" />
+              </figure>
+              {/* <div className="prod_details_img">
       <ReactImageMagnify
         {...{
           smallImage: {
@@ -112,7 +112,7 @@ const ProductDetails = () => {
         className="custom_magnify" // Add a custom class for styling purposes
       />
     </div> */}
-    </div>
+            </div>
 
             {/*=== Product Details Right-content ===*/}
             <div className="prod_details_right_col">
@@ -166,7 +166,7 @@ const ProductDetails = () => {
 
               <div className="prod_details_buy_btn">
                 <button type="button" className="btn" onClick={handleAddItem}>
-              Buy Now
+                  <Link to={"/cart"}>Buy Now</Link>
                 </button>
                 {/* <ToastContainer /> */}
               </div>

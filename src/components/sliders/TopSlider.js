@@ -48,6 +48,10 @@
 // };
 
 // export default TopSlider;
+
+
+
+
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -71,7 +75,7 @@ const TopSlider = () => {
           spaceBetween: 5,
         },
         480: {
-          slidesPerView: 2,
+          slidesPerView: 3,
           spaceBetween: 10,
         },
         768: {
