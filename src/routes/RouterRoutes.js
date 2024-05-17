@@ -13,29 +13,31 @@ import Laptop from "../components/subproduct/Laptop";
 import Earbuds from "../components/subproduct/Earbuds";
 import Neckband from "../components/subproduct/Neckband";
 import BreadCrumbs from "../components/breadcrumbs/BreadCrumbs";
+import SearchResults from "../components/search/SearchResults";
 const RouterRoutes = () => {
   useScrollRestore();
 
   return (
     <>
     
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/mobile" element={<Mobile />} />
-        <Route path="/tv" element={<TV />} />
-        <Route path="/headphone" element={<Headphone />} />
-        <Route path="/laptop" element={<Laptop />} />
-        <Route path="/earbuds" element={<Earbuds />} />
-        <Route path="/neckband" element={<Neckband />} />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/all-products" element={<AllProducts />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/product-details/:productId" element={<ProductDetails />} />
+      <Route path="/search/:searchTerm" element={<SearchResults />} />
 
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/all-products" element={<AllProducts />} />
-        <Route
-          path="/product-details/:productId"
-          element={<ProductDetails />}
-        />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
+      {/* Subproduct routes */}
+      <Route path="/mobile" element={<Mobile />} />
+      <Route path="/tv" element={<TV />} />
+      <Route path="/headphone" element={<Headphone />} />
+      <Route path="/laptop" element={<Laptop />} />
+      <Route path="/earbuds" element={<Earbuds />} />
+      <Route path="/neckband" element={<Neckband />} />
+
+      {/* Catch-all route for errors */}
+      <Route path="*" element={<ErrorPage />} />
+    </Routes>
     </>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeroSlider from "../components/sliders/HeroSlider";
 import FeaturedSlider from "../components/sliders/FeaturedSlider";
 import SectionsHead from "../components/common/SectionsHead";
@@ -9,8 +9,18 @@ import SwipperSlider from "../components/sliders/SwipperSlider";
 import OurProducts from "../components/product/OurProducts";
 import TopSlider from "../components/sliders/TopSlider";
 import MainSlider from "../components/sliders/MainSlider";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      easing: 'ease-in-out', // Animation easing
+    
+    });
+  }, []);
   return (
     <main>
       <section
@@ -21,7 +31,7 @@ const Home = () => {
       >
       {/* <MainSlider/> */}
         <div style={{display:"flex",
-        justifyContent:"center",alignItems:"center","flexDirection":"column",gap:"2rem"}}>
+        justifyContent:"center",alignItems:"center","flexDirection":"column",gap:"2rem"}} data-aos="fade-down">
           <h1>Categories</h1>
           {/* <TopBarProducts/> */}
           <TopSlider />

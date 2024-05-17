@@ -31,8 +31,6 @@ const Header = () => {
 
   const cartQuantity = cartItems.length;
 
-
-
   // ========new====
   const [searchTerm, setSearchTerm] = useState("");
   const [suggestions, setSuggestions] = useState([]);
@@ -55,6 +53,10 @@ const Header = () => {
     setSuggestions([]); // Clear suggestions
   };
 
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    console.log("search click");
+  };
   return (
     <>
       <header id="header" className={isSticky ? "sticky" : ""}>
@@ -83,11 +85,13 @@ const Header = () => {
                     padding: "10px",
                   }}
                 />
-                <button >
-                  <AiOutlineSearch
-                    style={{ color: "gray", fontSize: "30px" }}
-                  />
-                </button>
+                <Link to={`/search/${searchTerm}`} >
+                  <button onClick={handleSearchSubmit}>
+                    <AiOutlineSearch
+                      style={{ color: "gray", fontSize: "30px" }}
+                    />
+                  </button>
+                </Link>
                 {/* <div className="tooltip">Search</div> */}
               </div>
 
@@ -117,7 +121,7 @@ const Header = () => {
                     </button>
                   )}
                   <div className="separator"></div>
-                  <ul >
+                  <ul>
                     {dropdownMenu.map((item) => {
                       const { id, link, path } = item;
                       return (
@@ -137,35 +141,34 @@ const Header = () => {
       {/* {!searchQuery && <SearchBar />} */}
       <AccountForm />
       {/* Render the search results */}
-   {/* Display search results if search term is not empty */}
-   {searchTerm.trim() !== "" && (
-  <div>
-    <h2>Search Results</h2>
-    {suggestions.length > 0 ? (
-      <ul className="suggestion_bar">
-        {suggestions.map((item, id) => (
-          <li
-            key={id}
-            style={{ marginBottom: "5px", cursor: "pointer" }}
-            className="list_bar"
-          >
-            {/* Use Link component to link to the product */}
-            <Link
-              to={`${item.path}${item.id}`} 
-              style={{ color: "black", textDecoration: "none" }}
-              onClick={handleSearchResultClick} // Close suggestion on link click
-            >
-              {item.title.toLowerCase()}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    ) : (
-      <p>No results found</p>
-    )}
-  </div>
-)}
-
+      {/* Display search results if search term is not empty */}
+      {searchTerm.trim() !== "" && (
+        <div>
+          <h2>Search Results</h2>
+          {suggestions.length > 0 ? (
+            <ul className="suggestion_bar">
+              {suggestions.map((item, id) => (
+                <li
+                  key={id}
+                  style={{ marginBottom: "5px", cursor: "pointer" }}
+                  className="list_bar"
+                >
+                  {/* Use Link component to link to the product */}
+                  <Link
+                    to={`${item.path}${item.id}`}
+                    style={{ color: "black", textDecoration: "none" }}
+                    onClick={handleSearchResultClick} // Close suggestion on link click
+                  >
+                    {item.title.toLowerCase()}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p>No results found</p>
+          )}
+        </div>
+      )}
     </>
   );
 };
