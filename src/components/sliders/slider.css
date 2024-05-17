@@ -71,7 +71,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 50%;
+    border-radius: 20px;
     background-color: rgb(245, 245, 241);
     height: 150px;
     width: 150px;
