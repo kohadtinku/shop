@@ -14,6 +14,7 @@ import Earbuds from "../components/subproduct/Earbuds";
 import Neckband from "../components/subproduct/Neckband";
 import BreadCrumbs from "../components/breadcrumbs/BreadCrumbs";
 import SearchResults from "../components/search/SearchResults";
+import Test from "../components/search/Test";
 const RouterRoutes = () => {
   useScrollRestore();
 
@@ -26,6 +27,7 @@ const RouterRoutes = () => {
       <Route path="/cart" element={<Cart />} />
       <Route path="/product-details/:productId" element={<ProductDetails />} />
       <Route path="/search/:searchTerm" element={<SearchResults />} />
+      <Route path="/test" element={<Test/>} />
 
       {/* Subproduct routes */}
       <Route path="/mobile" element={<Mobile />} />

@@ -31,7 +31,7 @@ const Home = () => {
       >
       {/* <MainSlider/> */}
         <div style={{display:"flex",
-        justifyContent:"center",alignItems:"center","flexDirection":"column",gap:"2rem"}} data-aos="fade-down">
+        justifyContent:"center",alignItems:"center","flexDirection":"column",gap:"10px"}} data-aos="fade-down">
           <h1>Categories</h1>
           {/* <TopBarProducts/> */}
           <TopSlider />
