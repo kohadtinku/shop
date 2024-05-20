@@ -307,11 +307,16 @@ const FilterBarOptions = () => {
                     </div>
                 </div>
 
-                {/* <div className="apply_button">
-                    <button type="button" className="btn" onClick={handleApplyFilters}>
-                        Apply
+                <div className="apply_button">
+                <button
+                        type="button"
+                        className="close_btn"
+                        onClick={() => handleMobFilterVisibility(false)}
+                        style={{border:"1px solid red",padding:"10px",borderRadius:"10px",background:"red",color:"white",fontSize:"18px"}}
+                    >
+                  Apply
                     </button>
-                </div> */}
+                </div>
             </div>
         </>
     );
