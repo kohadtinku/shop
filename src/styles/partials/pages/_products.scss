@@ -67,7 +67,7 @@
   // height: 300px;
 
   img {
-    width: 70%;
+    width: 100%;
     @include transition(transform, 0.25s, ease);
 
     &:hover {

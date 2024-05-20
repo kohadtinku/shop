@@ -87,3 +87,22 @@
         margin-top: 1rem;
     }
 }
+
+.product-details-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .product-details-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .product-details-table td:first-child {
+    font-weight: bold;
+  }
+  
+  .custom-td {
+    text-align: start;
+  }
+  
