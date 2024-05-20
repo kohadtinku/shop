@@ -16,7 +16,7 @@ const Home = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration
+      duration: 2000, // Animation duration
       // easing: 'ease-in-out', // Animation easing
     
     });
@@ -38,20 +38,20 @@ const Home = () => {
         </div>
       </section>
       <section id="products" className="section">
-        <div className="container">
+        <div className="container" data-aos="zoom-in">
           {/* <SectionsHead heading="Top Products" /> */}
           {/* <TopProducts /> */}
           <OurProducts />
         </div>
       </section>
-      <section id="hero">
+      <section id="hero" data-aos="fade-down">
         <HeroSlider />
       </section>
 
       <section id="featured" className="section">
-        <div className="container">
+        <div className="container" data-aos="zoom-in">
           <SectionsHead heading="Featured Products" />
-          <FeaturedSlider />
+          <FeaturedSlider  />
         </div>
       </section>
 
