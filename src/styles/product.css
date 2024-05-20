@@ -56,7 +56,10 @@
     }
     .prod_details_buy_btn{
         margin-top: 30px;
-        margin-left: 74px;
+        /* margin-left: 74px; */
+        display: flex;
+        justify-content: center;
+        align-items:center ;
     }
   }
   
