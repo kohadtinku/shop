@@ -17,7 +17,7 @@ const Home = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000, // Animation duration
-      easing: 'ease-in-out', // Animation easing
+      // easing: 'ease-in-out', // Animation easing
     
     });
   }, []);
