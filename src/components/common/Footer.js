@@ -1,9 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { footMenu, footSocial } from '../../data/footerData';
 import logo from "../../assets/ymart.png"
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Footer = () => {
+    useEffect(() => {
+        AOS.init({
+          duration: 2000, // Animation duration
+          // easing: 'ease-in-out', // Animation easing
+        
+        });
+      }, []);
+
+
+
 
     const [subValue, setSubValue] = useState('');
 
@@ -17,7 +28,7 @@ const Footer = () => {
 
 
     return (
-        <footer id="footer">
+        <footer id="footer" data-aos="zoom-in">
             <div className="container">
                 <div className="wrapper footer_wrapper">
                     <div className="foot_about">
