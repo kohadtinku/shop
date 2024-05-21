@@ -30,19 +30,21 @@ const HeadPhoneFilter = () => {
     setHeadPhoneProducts(filteredProducts);
   }, []); // Empty dependency array ensures this effect runs only once on component mount
 
-  const handleLowtohigh = () => {
+  const handleLowtoHigh = () => {
     // Sort the filtered products by finalPrice from low to high
-    let sortedProducts = headPhoneProducts.sort(
-      (a, b) => a.finalPrice - b.finalPrice
-    );
+    let sortedProducts = headPhoneProducts.sort((a, b) => a.finalPrice - b.finalPrice);
     setHeadPhoneProducts([...sortedProducts]); // Ensure state immutability
   };
 
-  const handleHightoLow = () => {
+  const handleHighToLow = () => {
     // Sort the filtered products by finalPrice from high to low
-    let sortedProducts = headPhoneProducts.sort(
-      (a, b) => b.finalPrice - a.finalPrice
-    );
+    let sortedProducts = headPhoneProducts.sort((a, b) => b.finalPrice - a.finalPrice);
+    setHeadPhoneProducts([...sortedProducts]); // Ensure state immutability
+  };
+
+  const handleLatest = () => {
+    // Sort the filtered products by latest upload (assuming products have a `timestamp` property)
+    let sortedProducts = headPhoneProducts.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
     setHeadPhoneProducts([...sortedProducts]); // Ensure state immutability
   };
   const handleChange = (event) => {
@@ -107,17 +109,19 @@ const HeadPhoneFilter = () => {
             <h3 className="custom_title">Sort By</h3>
            
             </div>
-         
-          <select
+            <select
             className="custom_sort_menu"
             onChange={(event) => {
-              if (event.target.value === "lowHigh") {
-                handleLowtohigh();
+              if (event.target.value === "latest") {
+                handleLatest();
+              } else if (event.target.value === "lowHigh") {
+                handleLowtoHigh();
               } else if (event.target.value === "highLow") {
-                handleHightoLow();
+                handleHighToLow();
               }
             }}
           >
+            <option value="latest">Latest</option>
             <option value="lowHigh">Low-High</option>
             <option value="highLow">High-Low</option>
           </select>

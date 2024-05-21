@@ -67,17 +67,16 @@ const ProductCard = (props) => {
               <del>{oldPrice}</del>
             </small>
           </h2>
-          <button
-            type="button"
-            className={`btn products_btn ${activeClass(id)}`}
-            onClick={handleAddItem}
-            // id={id}
-          >
-            {/* {active ? 'Added' : 'Buy Now'} */}
-            <h5>
-              <Link to={"/cart"}>Buy Now</Link>
-            </h5>
-            {/* <ToastContainer  position="top-right"
+          <Link to={"/cart"}>
+            <button
+              type="button"
+              className={`btn products_btn ${activeClass(id)}`}
+              onClick={handleAddItem}
+              // id={id}
+            >
+              {/* {active ? 'Added' : 'Buy Now'} */}
+              <h5>Buy Now</h5>
+              {/* <ToastContainer  position="top-right"
          autoClose={2000}
          hideProgressBar={false}
          newestOnTop={false}
@@ -88,7 +87,8 @@ const ProductCard = (props) => {
          draggable
          id={id}
          pauseOnHover /> */}
-          </button>
+            </button>
+          </Link>
         </div>
       </div>
     </>
