@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import reviewsData from "../../data/reviewsData";
 import useActive from "../../hooks/useActive";
 import ProductReviews from "./ProductReviews";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ProductSummary = (props) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, // Animation duration
+      // easing: 'ease-in-out', // Animation easing
+    
+    });
+  }, []);
   const { brand, title, info, category, type, connectivity } = props;
 
   const { active, handleActive, activeClass } = useActive("specs");
 
   return (
     <>
-      <section id="product_summary" className="section">
+      <section id="product_summary" className="section" data-aos="zoom-in">
         <div className="container">
           {/*===== Product-Summary-Tabs =====*/}
           <div className="prod_summary_tabs">

@@ -5,8 +5,17 @@ import productsData from "../../data/productsData";
 import ProductCard from "../product/ProductCard";
 import EmptyView from "../common/EmptyView";
 import { BsExclamationCircle } from "react-icons/bs";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const SearchResults = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, // Animation duration
+      // easing: 'ease-in-out', // Animation easing
+    
+    });
+  }, []);
   const { searchTerm } = useParams();
   const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -26,7 +35,7 @@ const SearchResults = () => {
               Search Results for{" "}
               <span style={{ color: "red" }}>"{searchTerm}" </span>{" "}
             </h2>
-            <div className="wrapper products_wrapper">
+            <div className="wrapper products_wrapper" data-aos="zoom-in">
               {filteredProducts.map((item) => (
                 <ProductCard key={item.id} {...item} />
               ))}

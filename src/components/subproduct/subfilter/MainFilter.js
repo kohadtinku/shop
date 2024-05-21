@@ -247,8 +247,17 @@ import ProductCard from "../../product/ProductCard";
 import EmptyView from "../../common/EmptyView";
 import { BsExclamationCircle } from "react-icons/bs";
 import priceMenu from "../../../data/filterBarData";
-import '../../../App.css'
+import '../../../App.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 const MainFIlter = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, // Animation duration
+      // easing: 'ease-in-out', // Animation easing
+    
+    });
+  }, []);
   const {
     sortedValue,
     mobFilterBar: { isMobSortVisible, isMobFilterVisible },
@@ -284,6 +293,7 @@ const MainFIlter = () => {
     // Sort the filtered products by latest upload (assuming products have a `timestamp` property)
     let sortedProducts = mobileProducts.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
     setMobileProducts([...sortedProducts]); // Ensure state immutability
+    console.log(sortedProducts);
   };
 
   const handleChange = (event) => {
@@ -392,7 +402,7 @@ const MainFIlter = () => {
           </div>
         </div>
       </div>
-      <div className="custom_container" style={{ display: "flex" }}>
+      <div className="custom_container" style={{ display: "flex" }} data-aos="fade-down">
         {mobileProducts.length ? (
           <div className="wrapper products_wrapper">
             {mobileProducts.map((item) => (

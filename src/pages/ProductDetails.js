@@ -268,7 +268,16 @@ import {
   Autoplay,
 } from "swiper/modules";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
 const ProductDetails = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, // Animation duration
+      // easing: 'ease-in-out', // Animation easing
+    
+    });
+  }, []);
   useDocTitle("Product Details");
 
   const { handleActive, activeClass } = useActive(0);
@@ -290,10 +299,9 @@ const ProductDetails = () => {
 
   const [previewImg, setPreviewImg] = useState(images[0]);
 
-  // const handleAddItem = () => {
-  //   addItem(product);
-  //   toast.success("Added To Cart");
-  // };
+  const handleAddItem = () => {
+    addItem(product);
+    };
 
   useEffect(() => {
     setPreviewImg(images[0]);
@@ -312,7 +320,7 @@ const ProductDetails = () => {
         <div className="container">
           <div className="wrapper prod_details_wrapper">
             <div className="prod_details_left_col">
-              <div className="prod_details_tabs">
+              <div className="prod_details_tabs" data-aos="fade-left">
                 <Swiper
                   navigation={true}
                   pagination={true}
@@ -336,7 +344,7 @@ const ProductDetails = () => {
                 </Swiper>
               </div>
             </div>
-            <div className="prod_details_right_col">
+            <div className="prod_details_right_col" data-aos="fade-down">
               <h1 className="prod_details_title">{title}</h1>
               <h4 className="prod_details_info">{info}</h4>
               <div className="prod_details_ratings">
@@ -379,7 +387,7 @@ const ProductDetails = () => {
               <div className="separator"></div>
               <div className="prod_details_buy_btn">
                 <Link to={"/cart"}>
-                  <button type="button" className="btn">
+                  <button type="button" className="btn" onClick={handleAddItem}>
                     Buy Now
                   </button>
                 </Link>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, A11y } from 'swiper/modules';
 import productsData from '../../data/productsData';
@@ -6,9 +6,18 @@ import ProductCard from '../product/ProductCard';
 
 import 'swiper/scss';
 import 'swiper/scss/pagination';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 const RelatedSlider = (props) => {
+    useEffect(() => {
+        AOS.init({
+          duration: 2000, // Animation duration
+          // easing: 'ease-in-out', // Animation easing
+        
+        });
+      }, []);
 
     const { category } = props;
 
@@ -16,6 +25,7 @@ const RelatedSlider = (props) => {
 
     return (
         <Swiper
+        data-aos="fade-down"
             modules={[Pagination, A11y]}
             spaceBetween={10}
             slidesPerView={"auto"}

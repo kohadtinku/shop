@@ -8,8 +8,17 @@ import ProductCard from "../../product/ProductCard";
 import EmptyView from "../../common/EmptyView";
 import { BsExclamationCircle } from "react-icons/bs";
 import priceMenu from "../../../data/filterBarData";
-import '../../../App.css'
+import '../../../App.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 const NeckBandFilter = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, // Animation duration
+      // easing: 'ease-in-out', // Animation easing
+    
+    });
+  }, []);
   const {
     sortedValue,
     mobFilterBar: { isMobSortVisible, isMobFilterVisible },
@@ -154,7 +163,7 @@ const NeckBandFilter = () => {
           </div>
         </div>
       </div>
-      <div className="custom_container" style={{ display: "flex" }}>
+      <div className="custom_container" style={{ display: "flex" }} data-aos="fade-down">
         {nackbandProducts.length ? (
           <div className="wrapper products_wrapper">
             {nackbandProducts.map((item) => (

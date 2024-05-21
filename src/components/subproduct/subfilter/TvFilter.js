@@ -9,7 +9,16 @@ import EmptyView from "../../common/EmptyView";
 import { BsExclamationCircle } from "react-icons/bs";
 import priceMenu from "../../../data/filterBarData";
 import '../../../App.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
 const TvFilter = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      // easing: 'ease-in-out', // Animation easing
+    
+    });
+  }, []);
   const {
     sortedValue,
     mobFilterBar: { isMobSortVisible, isMobFilterVisible },
@@ -157,7 +166,7 @@ const TvFilter = () => {
       </div>
       <div className="custom_container" style={{ display: "flex" }}>
         {tvProducts.length ? (
-          <div className="wrapper products_wrapper">
+          <div className="wrapper products_wrapper" data-aos="fade-down">
             {tvProducts.map((item) => (
               <ProductCard key={item.id} {...item} />
             ))}

@@ -8,8 +8,17 @@ import ProductCard from "../../product/ProductCard";
 import EmptyView from "../../common/EmptyView";
 import { BsExclamationCircle } from "react-icons/bs";
 import priceMenu from "../../../data/filterBarData";
-import '../../../App.css'
+import '../../../App.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 const EarFilter = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, // Animation duration
+      // easing: 'ease-in-out', // Animation easing
+    
+    });
+  }, []);
   const {
     sortedValue,
     mobFilterBar: { isMobSortVisible, isMobFilterVisible },
@@ -154,7 +163,7 @@ const EarFilter = () => {
           </div>
         </div>
       </div>
-      <div className="custom_container" style={{ display: "flex" }}>
+      <div className="custom_container" style={{ display: "flex" }} data-aos="fade-down">
         {earProducts.length ? (
           <div className="wrapper products_wrapper">
             {earProducts.map((item) => (
