@@ -104,7 +104,7 @@
 //                     <img src={img} alt="product-img" />
 //                   </div>
 //                 ))} */}
-//                 {/* 
+//                 {/*
 //                 <Swiper
 //                   navigation={true}
 //                   pagination={true}
@@ -240,15 +240,6 @@
 
 // export default ProductDetails;
 
-
-
-
-
-
-
-
-
-
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { IoMdStar, IoMdCheckmark } from "react-icons/io";
@@ -264,12 +255,18 @@ import Services from "../components/common/Services";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import '../styles/product.css';
-import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "../styles/product.css";
+import {
+  Navigation,
+  Pagination,
+  Mousewheel,
+  Keyboard,
+  Autoplay,
+} from "swiper/modules";
 
 const ProductDetails = () => {
   useDocTitle("Product Details");
@@ -293,10 +290,10 @@ const ProductDetails = () => {
 
   const [previewImg, setPreviewImg] = useState(images[0]);
 
-  const handleAddItem = () => {
-    addItem(product);
-    toast.success("Added To Cart");
-  };
+  // const handleAddItem = () => {
+  //   addItem(product);
+  //   toast.success("Added To Cart");
+  // };
 
   useEffect(() => {
     setPreviewImg(images[0]);
@@ -381,9 +378,11 @@ const ProductDetails = () => {
               </div>
               <div className="separator"></div>
               <div className="prod_details_buy_btn">
-                <button type="button" className="btn" onClick={handleAddItem}>
-                  <Link to={"/cart"}>Buy Now</Link>
-                </button>
+                <Link to={"/cart"}>
+                  <button type="button" className="btn">
+                    Buy Now
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
