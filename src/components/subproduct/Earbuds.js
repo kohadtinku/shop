@@ -1,6 +1,3 @@
-
-
-
 import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { BsArrowRight, BsExclamationCircle } from 'react-icons/bs';
@@ -25,7 +22,7 @@ const EarBuds = () => {
 
   return (
     <>
-      <section id="custom_products" className="custom_products" style={{display:"flex",marginTop:"100px"}}>
+      <section id="custom_products" className="custom_products" style={{display:"flex"}}>
         {/* <CustomFilter /> */}
         {/* <FilterBar/> */}
         <EarFilter/>

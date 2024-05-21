@@ -138,7 +138,7 @@ const Mobile = () => {
 
   return (
     <>
-      <section id="custom_products" className="custom_products" style={{display:"flex",marginTop:"100px"}}>
+      <section id="custom_products" className="custom_products" style={{display:"flex"}}>
         {/* <CustomFilter /> */}
         {/* <FilterBar/> */}
         <MainFIlter/>

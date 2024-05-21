@@ -13,7 +13,6 @@ import FilterBar from '../filters/FilterBar';
 import MainFIlter from './subfilter/MainFilter';
 import EarFilter from './subfilter/EarFilter';
 import TvFilter from './subfilter/TvFilter';
-
 const TV = () => {
   const { allProducts } = useContext(filtersContext);
   const [tvProducts, setTvProducts] = useState([]);
@@ -26,7 +25,7 @@ const TV = () => {
 
   return (
     <>
-      <section id="custom_products" className="custom_products" style={{display:"flex",marginTop:"100px"}}>
+      <section id="custom_products" className="custom_products" style={{display:"flex"}}>
         {/* <CustomFilter /> */}
         {/* <FilterBar/> */}
         <TvFilter/>

@@ -25,13 +25,13 @@ const Home = () => {
     <main>
       <section
         className="topbarproducts"
-        style={{
-          marginTop: "100px",
-        }}
+        // style={{
+        //   marginTop: "100px",
+        // }}
       >
       {/* <MainSlider/> */}
         <div style={{display:"flex",
-        justifyContent:"center",alignItems:"center","flexDirection":"column",gap:"10px"}} data-aos="fade-down">
+        justifyContent:"center",alignItems:"center","flexDirection":"column",gap:"10px",marginTop:"100px"}} data-aos="fade-down">
           <h1>Categories</h1>
           {/* <TopBarProducts/> */}
           <TopSlider />
