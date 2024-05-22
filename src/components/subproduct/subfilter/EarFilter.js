@@ -53,9 +53,11 @@ const EarFilter = () => {
 
   const handleLatest = () => {
     // Sort the filtered products by latest upload (assuming products have a `timestamp` property)
-    let sortedProducts = earProducts.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-    setEarProducts([...sortedProducts]); // Ensure state immutability
+    const sortedProducts = [...earProducts].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+    console.log('Sorted Products:', sortedProducts); // Debugging output
+    setEarProducts(sortedProducts); // Update state with sorted products
   };
+  
   const handleChange = (event) => {
     const { value } = event.target;
     let filteredProducts = [];
