@@ -429,6 +429,8 @@ const productsData = [
     quantity: 1,
     ratings: 474,
     rateCount: 4,
+    ram:"4GB",
+    internal:"108GB",
     path: "/product-details/",
   },
   {

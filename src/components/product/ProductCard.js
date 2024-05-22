@@ -30,7 +30,7 @@ const ProductCard = (props) => {
     // toast("Added To Cart");
     // console.log(toast);
     // alert("Added to cart")
-    toast.success(`Added to cart, ${id}!`);
+    // toast.success(`Added to cart, ${id}!`);
 
     handleActive(id);
 

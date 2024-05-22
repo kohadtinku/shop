@@ -376,6 +376,8 @@ const ProductDetails = () => {
                   </span>
                 </div>
               </div>
+
+              {/* ram rom */}
               <div className="separator"></div>
               <div className="prod_details_offers">
                 <h4>Offers and Discounts</h4>
