@@ -278,7 +278,7 @@ const productsData = [
     battery_life: "24 hours",
     noise_cancellation: "Yes",
     colorVariants: "Red , Black",
-
+waterproof:"yes",
     path: "/product-details/",
   },
 
