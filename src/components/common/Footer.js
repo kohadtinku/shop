@@ -5,13 +5,7 @@ import logo from "../../assets/ymart.png"
 import AOS from "aos";
 import "aos/dist/aos.css";
 const Footer = () => {
-    useEffect(() => {
-        AOS.init({
-          duration: 2000, // Animation duration
-          // easing: 'ease-in-out', // Animation easing
-        
-        });
-      }, []);
+ 
 
 
 
@@ -28,7 +22,7 @@ const Footer = () => {
 
 
     return (
-        <footer id="footer" data-aos="zoom-in">
+        <footer id="footer" >
             <div className="container">
                 <div className="wrapper footer_wrapper">
                     <div className="foot_about">
