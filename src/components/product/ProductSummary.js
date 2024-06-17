@@ -190,7 +190,7 @@ const ProductSummary = (props) => {
     });
   }, []);
 
-  const { brand, title, info, category, type, connectivity, ram, internal, color_varient } = props;
+  const { brand, title, info, category, type, connectivity, ram, internal, color_varient,picture_quality,screen_size ,screenSize,processor,colorVariants,warranty,releaseDate,waterproof,battery_life,noise_cancellation} = props;
 console.log(category);
   const { active, handleActive, activeClass } = useActive("specs");
 
@@ -263,9 +263,90 @@ console.log(category);
                           <td>{internal}</td>
                         </tr>
                         <tr>
-                          <td>Color Variant</td>
+                          <td>Color Varient</td>
                           <td>{color_varient}</td>
                         </tr>
+                     
+                      </>
+                    )}
+                    {category === "TV" && (
+                      <>
+                        <tr>
+                          <td>Screen Size</td>
+                          <td>{screen_size}</td>
+                        </tr>
+                        <tr>
+                          <td>Picture Quality</td>
+                          <td>{picture_quality}</td>
+                        </tr>
+                     
+                      </>
+                    )}
+                    {category === "Laptop" && (
+                      <>
+                        <tr>
+                          <td>Screen Size</td>
+                          <td>{screenSize}</td>
+                        </tr>
+                        <tr>
+                          <td>Processor</td>
+                          <td>{processor}</td>
+                        </tr>
+                        <tr>
+                          <td>Color Variant</td>
+                          <td>{colorVariants}</td>
+                        </tr>
+                        <tr>
+                          <td>Warranty</td>
+                          <td>{warranty}</td>
+                        </tr>
+                        <tr>
+                          <td>Release Date</td>
+                          <td>{releaseDate}</td>
+                        </tr>
+                     
+                      </>
+                    )}
+                    {category === "Neckbands" && (
+                      <>
+                        <tr>
+                          <td> Battery Life</td>
+                          <td>{battery_life}</td>
+                        </tr>
+                        <tr>
+                          <td>waterproof</td>
+                          <td>{waterproof}</td>
+                        </tr>
+                      
+                     
+                      </>
+                    )}
+                    {category === "Earbuds" && (
+                      <>
+                        <tr>
+                          <td> Battery Life</td>
+                          <td>{battery_life}</td>
+                        </tr>
+                        <tr>
+                          <td>waterproof</td>
+                          <td>{waterproof}</td>
+                        </tr>
+                      
+                     
+                      </>
+                    )}
+                    {category === "Headphones" && (
+                      <>
+                        <tr>
+                          <td> Battery Life</td>
+                          <td>{battery_life}</td>
+                        </tr>
+                        <tr>
+                          <td>Noise Cancellation</td>
+                          <td>{noise_cancellation}</td>
+                        </tr>
+                      
+                     
                       </>
                     )}
                   </tbody>
