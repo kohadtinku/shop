@@ -1,14 +1,17 @@
 #footer {
     // background-color: var(--black-color);
-    // background-color: white;
-    border: 1px solid black;
-    background: linear-gradient(#ffeb3b, #ff893b);
-    @include padding-y(3rem, 2rem);
-
+    background-color: #f3f8ff;
+    // border: 1px solid black;
+    // background: linear-gradient(#ffeb3b, #ff893b);
+    // @include padding-y(3rem, 2rem);
+// background-color: #f3f8ff;
     .separator {
         @include margin-y(2.5rem, 2rem);
         opacity: 0.7;
     }
+}
+#footer .container {
+    padding: 20px;
 }
 
 .footer_wrapper {

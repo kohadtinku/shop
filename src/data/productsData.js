@@ -26,6 +26,8 @@ const productsData = [
     picture_quality: "4K Ultra HD",
     screen_size: "55 inches",
     smart_features: "Google Assistant, Alexa, Smart Hub",
+    colorVariants: "Red , Gray",
+
     path: "/product-details/",
   },
 
@@ -53,6 +55,8 @@ const productsData = [
     color_varient: "Red,Gray",
     battery_life: "20 hours",
     noise_cancellation: "No",
+    colorVariants: "Red , Black",
+
     path: "/product-details/",
   },
 
@@ -79,6 +83,8 @@ const productsData = [
     color_varient: "Black,Gray",
     driver_size: "10mm",
     frequency_response: "20Hz-20KHz",
+    colorVariants: "Red , Green",
+
     path: "/product-details/",
   },
 
@@ -104,6 +110,8 @@ const productsData = [
     rateCount: 5,
     battery_life: "12 hours",
     noise_cancellation: "Yes",
+    colorVariants: "Red , Black",
+
     path: "/product-details/",
   },
 
@@ -128,6 +136,8 @@ const productsData = [
     ratings: 836,
     rateCount: 4,
     battery_life: "10 hours",
+    colorVariants: "Red , Black",
+
     waterproof: "Yes",
     path: "/product-details/",
   },
@@ -157,6 +167,8 @@ const productsData = [
     rateCount: 4,
     battery_life: "30 hours",
     noise_cancellation: "Yes",
+    colorVariants: "Red , Black",
+
     path: "/product-details/",
   },
 
@@ -183,6 +195,8 @@ const productsData = [
     rateCount: 4,
     battery_life: "35 hours",
     noise_cancellation: "Yes",
+    colorVariants: "Red , Black",
+
     path: "/product-details/",
   },
 
@@ -209,6 +223,8 @@ const productsData = [
     rateCount: 5,
     battery_life: "8 hours",
     waterproof: "No",
+    colorVariants: "Red , Black",
+
     path: "/product-details/",
   },
 
@@ -234,6 +250,8 @@ const productsData = [
     rateCount: 4,
     battery_life: "20 hours",
     waterproof: "Yes",
+    colorVariants: "Red , Black",
+
     path: "/product-details/",
   },
 
@@ -259,6 +277,8 @@ const productsData = [
     rateCount: 3,
     battery_life: "24 hours",
     noise_cancellation: "Yes",
+    colorVariants: "Red , Black",
+
     path: "/product-details/",
   },
 
@@ -308,9 +328,12 @@ const productsData = [
     quantity: 1,
     ratings: 1144,
     rateCount: 5,
-    description: "The JBL Endurance Run Sports earphones are designed for a comfortable and secure fit. They deliver high-quality sound and have a sweatproof design.",
+    description:
+      "The JBL Endurance Run Sports earphones are designed for a comfortable and secure fit. They deliver high-quality sound and have a sweatproof design.",
     releaseDate: "2021-04-10",
     warranty: "1 year",
+    colorVariants: "Red , Black",
+
     path: "/product-details/",
   },
   {
@@ -334,9 +357,12 @@ const productsData = [
     quantity: 1,
     ratings: 1340,
     rateCount: 5,
-    description: "boAt Airdopes 203 offers a truly wireless experience with rich sound quality and long-lasting battery life, perfect for on-the-go listening.",
+    description:
+      "boAt Airdopes 203 offers a truly wireless experience with rich sound quality and long-lasting battery life, perfect for on-the-go listening.",
     releaseDate: "2020-11-15",
     warranty: "1 year",
+    colorVariants: "Red , Black",
+
     path: "/product-details/",
   },
   {
@@ -359,9 +385,12 @@ const productsData = [
     quantity: 1,
     ratings: 853,
     rateCount: 4,
-    description: "Sony WH-CH710N headphones offer excellent noise cancellation, wireless freedom, and high-fidelity sound for an immersive listening experience.",
+    description:
+      "Sony WH-CH710N headphones offer excellent noise cancellation, wireless freedom, and high-fidelity sound for an immersive listening experience.",
     releaseDate: "2019-09-20",
     warranty: "2 years",
+    colorVariants: "Red , Black",
+
     path: "/product-details/",
   },
   {
@@ -384,9 +413,12 @@ const productsData = [
     quantity: 1,
     ratings: 364,
     rateCount: 4,
-    description: "JBL Tune 500BT headphones provide powerful bass, wireless convenience, and up to 16 hours of battery life for non-stop listening.",
+    description:
+      "JBL Tune 500BT headphones provide powerful bass, wireless convenience, and up to 16 hours of battery life for non-stop listening.",
     releaseDate: "2020-06-01",
     warranty: "1 year",
+    colorVariants: "Red , Black",
+
     path: "/product-details/",
   },
   {
@@ -409,9 +441,12 @@ const productsData = [
     quantity: 1,
     ratings: 1011,
     rateCount: 5,
-    description: "boAt Airdopes 381 offers superior sound quality, a secure fit, and IPX5 water resistance, making them ideal for workouts and outdoor activities.",
+    description:
+      "boAt Airdopes 381 offers superior sound quality, a secure fit, and IPX5 water resistance, making them ideal for workouts and outdoor activities.",
     releaseDate: "2021-02-15",
     warranty: "1 year",
+    colorVariants: "Red , Black",
+
     path: "/product-details/",
   },
   {
@@ -434,9 +469,12 @@ const productsData = [
     quantity: 1,
     ratings: 530,
     rateCount: 4,
-    description: "Sony MDR-EX14AP earphones deliver clear sound with comfortable earbud tips, and include an in-line mic for hands-free calls.",
+    description:
+      "Sony MDR-EX14AP earphones deliver clear sound with comfortable earbud tips, and include an in-line mic for hands-free calls.",
     releaseDate: "2020-03-05",
     warranty: "1 year",
+    colorVariants: "Red , Black",
+
     path: "/product-details/",
   },
   {
@@ -459,9 +497,14 @@ const productsData = [
     quantity: 1,
     ratings: 474,
     rateCount: 4,
-    description: "Sony WI-XB400 neckbands offer powerful bass, up to 15 hours of battery life, and a lightweight design for all-day comfort.",
+    description:
+      "Sony WI-XB400 neckbands offer powerful bass, up to 15 hours of battery life, and a lightweight design for all-day comfort.",
     releaseDate: "2019-08-12",
     warranty: "1 year",
+    battery_life: "35 hours",
+    waterproof: "yes",
+    colorVariants: "Red , Black",
+
     path: "/product-details/",
   },
   // ========================mobile data=============================================
@@ -485,9 +528,9 @@ const productsData = [
     quantity: 1,
     ratings: 474,
     rateCount: 4,
-    ram:"12GB",
-    internal:"256GB",
-    color_varient:"Red,Black",
+    ram: "12GB",
+    internal: "256GB",
+    color_varient: "Red,Black",
     path: "/product-details/",
   },
   {
@@ -510,9 +553,9 @@ const productsData = [
     quantity: 1,
     ratings: 474,
     rateCount: 4,
-    ram:"8GB",
-    internal:"256GB",
-    color_varient:"Green,Black,Silver",
+    ram: "8GB",
+    internal: "256GB",
+    color_varient: "Green,Black,Silver",
 
     path: "/product-details/",
   },
@@ -536,9 +579,9 @@ const productsData = [
     quantity: 1,
     ratings: 474,
     rateCount: 4,
-    ram:"6GB",
-    internal:"128GB",
-    color_varient:"Red,Black,Blue",
+    ram: "6GB",
+    internal: "128GB",
+    color_varient: "Red,Black,Blue",
 
     path: "/product-details/",
   },
@@ -562,9 +605,9 @@ const productsData = [
     quantity: 1,
     ratings: 474,
     rateCount: 4,
-    ram:"8GB",
-    internal:"256GB",
-    color_varient:"Green,Black",
+    ram: "8GB",
+    internal: "256GB",
+    color_varient: "Green,Black",
 
     path: "/product-details/",
   },
@@ -577,8 +620,7 @@ const productsData = [
       "/images/products/mi-13-c3.jpg",
     ],
     brand: "Xiaomi",
-    title:
-      "Redmi 13C ",
+    title: "Redmi 13C ",
     info: "Wireless Extra Bass In-Ear Neckbands",
     category: "Mobile",
     company: "xiaomi",
@@ -589,13 +631,13 @@ const productsData = [
     quantity: 1,
     ratings: 474,
     rateCount: 4,
-    ram:"6GB",
-    internal:"128GB",
-    color_varient:"Green,Red,Silver",
+    ram: "6GB",
+    internal: "128GB",
+    color_varient: "Green,Red,Silver",
 
     path: "/product-details/",
   },
-// laptop================================================
+  // laptop================================================
 
   {
     id: 25,
@@ -618,13 +660,14 @@ const productsData = [
     ratings: 474,
     rateCount: 4,
     path: "/product-details/",
-    description: "The ASUS VivoBook 15 is a compact laptop that immerses you in whatever you set out to do. It has a thin and light design, making it perfect for people who are always on the go.",
+    description:
+      "The ASUS VivoBook 15 is a compact laptop that immerses you in whatever you set out to do. It has a thin and light design, making it perfect for people who are always on the go.",
     releaseDate: "2021-05-15",
     warranty: "1 year",
     colorVariants: "Red , Black",
 
     processor: "Intel Celeron N4020",
-    screenSize: "15.6 inches"
+    screenSize: "15.6 inches",
   },
   {
     id: 26,
@@ -647,13 +690,14 @@ const productsData = [
     ratings: 474,
     rateCount: 4,
     path: "/product-details/",
-    description: "The HP Laptop 15s offers a balance of performance, productivity, and entertainment features with its 12th Gen Intel Core i5 processor and Intel Iris Xe Graphics, perfect for multitasking.",
+    description:
+      "The HP Laptop 15s offers a balance of performance, productivity, and entertainment features with its 12th Gen Intel Core i5 processor and Intel Iris Xe Graphics, perfect for multitasking.",
     releaseDate: "2022-03-10",
     warranty: "1 year",
     colorVariants: "Red , Black",
 
     processor: "Intel Core i5-1235U",
-    screenSize: "15.6 inches"
+    screenSize: "15.6 inches",
   },
   {
     id: 27,
@@ -676,13 +720,14 @@ const productsData = [
     ratings: 474,
     rateCount: 4,
     path: "/product-details/",
-    description: "The Acer Aspire Lite is a sleek, lightweight laptop with powerful performance, featuring a 12th Gen Intel Core i5 processor, 16GB RAM, and a 512GB SSD for fast, efficient multitasking.",
+    description:
+      "The Acer Aspire Lite is a sleek, lightweight laptop with powerful performance, featuring a 12th Gen Intel Core i5 processor, 16GB RAM, and a 512GB SSD for fast, efficient multitasking.",
     releaseDate: "2022-01-05",
     warranty: "1 year",
     colorVariants: "Red , Black",
 
     processor: "Intel Core i5-1235U",
-    screenSize: "15.6 inches"
+    screenSize: "15.6 inches",
   },
   {
     id: 28,
@@ -705,13 +750,14 @@ const productsData = [
     ratings: 474,
     rateCount: 3,
     path: "/product-details/",
-    description: "The Lenovo IdeaPad 3 is designed for long-lasting performance with the latest Intel Core i5 processor, a 15.6-inch FHD display, and a backlit keyboard for a comfortable typing experience.",
+    description:
+      "The Lenovo IdeaPad 3 is designed for long-lasting performance with the latest Intel Core i5 processor, a 15.6-inch FHD display, and a backlit keyboard for a comfortable typing experience.",
     releaseDate: "2022-02-20",
     warranty: "1 year",
     colorVariants: "Red , Black",
 
     processor: "Intel Core i5-1235U",
-    screenSize: "15.6 inches"
+    screenSize: "15.6 inches",
   },
   {
     id: 29,
@@ -734,15 +780,14 @@ const productsData = [
     ratings: 474,
     rateCount: 5,
     path: "/product-details/",
-    description: "The Dell 14 Laptop combines powerful performance with a sleek design, featuring a 12th Gen Intel Core i5 processor, 16GB RAM, and a 512GB SSD, ideal for both work and play.",
+    description:
+      "The Dell 14 Laptop combines powerful performance with a sleek design, featuring a 12th Gen Intel Core i5 processor, 16GB RAM, and a 512GB SSD, ideal for both work and play.",
     releaseDate: "2022-04-10",
     warranty: "1 year",
     colorVariants: "Red , Black",
     processor: "Intel Core i5-1235U",
-    screenSize: "14.0 inches"
+    screenSize: "14.0 inches",
   },
-
-
 
   // tv==================
 
@@ -755,7 +800,8 @@ const productsData = [
       "/images/products/mi_tv_4.jpg",
     ],
     brand: "Xiaomi",
-    title: "Xiaomi 108 cm (43 inches) X Series 4K Ultra HD Smart Google TV L43M8-A2IN (Black)",
+    title:
+      "Xiaomi 108 cm (43 inches) X Series 4K Ultra HD Smart Google TV L43M8-A2IN (Black)",
     info: "4K Ultra HD Smart TV, 108 cm (43 inches), Google TV, Dolby Vision, Dolby Audio, PatchWall, 2GB RAM, 16GB Storage, Bluetooth Remote, Google Assistant, Built-in Chromecast, Wi-Fi Connectivity",
     category: "TV",
     company: "xiaomi",
@@ -768,6 +814,8 @@ const productsData = [
     quantity: 1,
     ratings: 474,
     rateCount: 5,
+    colorVariants: "Red , Black",
+
     path: "/product-details/",
   },
   {
@@ -779,7 +827,8 @@ const productsData = [
       "/images/products/sony_tv_4.jpg",
     ],
     brand: "Sony",
-    title: "Sony Bravia 164 cm (65 inches) 4K Ultra HD Smart LED Google TV KD-65X74L (Black)",
+    title:
+      "Sony Bravia 164 cm (65 inches) 4K Ultra HD Smart LED Google TV KD-65X74L (Black)",
     info: "4K Ultra HD Smart TV, 164 cm (65 inches), Google TV, TRILUMINOS Display, X1 4K HDR Processor, Dolby Vision, Dolby Atmos, Built-in Chromecast, Google Assistant, Wi-Fi Connectivity",
     category: "TV",
     company: "sony",
@@ -792,6 +841,8 @@ const productsData = [
     quantity: 1,
     ratings: 474,
     rateCount: 5,
+    colorVariants: "Red , Black",
+
     path: "/product-details/",
   },
   {
@@ -803,7 +854,8 @@ const productsData = [
       "/images/products/panaso_tv_4.jpg",
     ],
     brand: "Panasonic",
-    title: "Panasonic 108 cm (43 inches) 4K Ultra HD Smart LED Google TV TH-43MX660DX (Black)",
+    title:
+      "Panasonic 108 cm (43 inches) 4K Ultra HD Smart LED Google TV TH-43MX660DX (Black)",
     info: "4K Ultra HD Smart TV, 108 cm (43 inches), Google TV, Hexa Chroma Drive, HDR10+, Dolby Vision, Dolby Atmos, My Home Screen 6.0, Built-in Google Assistant, Wi-Fi Connectivity",
     category: "TV",
     company: "panasonic",
@@ -816,6 +868,8 @@ const productsData = [
     quantity: 1,
     ratings: 474,
     rateCount: 5,
+    colorVariants: "Red , Black",
+
     path: "/product-details/",
   },
   {
@@ -827,7 +881,8 @@ const productsData = [
       "/images/products/sams_tv_4.jpg",
     ],
     brand: "Samsung",
-    title: "Samsung 80 cm (32 inches) HD Ready Smart LED TV UA32T4380AKXXL (Glossy Black)",
+    title:
+      "Samsung 80 cm (32 inches) HD Ready Smart LED TV UA32T4380AKXXL (Glossy Black)",
     info: "HD Ready Smart TV, 80 cm (32 inches), HDR, Ultra Clean View, PurColor, Screen Mirroring, SmartThings App Support, Live Cast, Wi-Fi Connectivity",
     category: "TV",
     company: "samsung",
@@ -840,6 +895,8 @@ const productsData = [
     quantity: 1,
     ratings: 474,
     rateCount: 5,
+    colorVariants: "Red , Black",
+
     path: "/product-details/",
   },
 ];

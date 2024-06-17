@@ -23,7 +23,7 @@ const topdata = [
   {
     id: 4,
     title: "Laptop",
-    img: "/images/products/acerlapi_1.jpg",
+    img: "/images/products/hplapi_1.jpg",
 
     path: "/product-details/",
     href: "/laptop",

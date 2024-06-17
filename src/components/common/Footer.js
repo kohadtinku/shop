@@ -6,10 +6,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 const Footer = () => {
  
-
-
-
-
     const [subValue, setSubValue] = useState('');
 
     const handleSubmit = (e) => {
@@ -28,7 +24,7 @@ const Footer = () => {
                     <div className="foot_about">
                         <h2>
                             <Link to="/">
-                            <img src={logo} alt="" style={{height:"50px",width:"70px"}}/>
+                            <img src={logo} alt="" style={{height:"70px",width:"70px"}}/>
 
                             </Link>
                         </h2>

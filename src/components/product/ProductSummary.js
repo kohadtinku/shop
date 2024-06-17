@@ -317,7 +317,10 @@ console.log(category);
                           <td>waterproof</td>
                           <td>{waterproof}</td>
                         </tr>
-                      
+                        <tr>
+                          <td>Color Variant</td>
+                          <td>{colorVariants}</td>
+                        </tr>
                      
                       </>
                     )}
@@ -330,6 +333,10 @@ console.log(category);
                         <tr>
                           <td>waterproof</td>
                           <td>{waterproof}</td>
+                        </tr>
+                        <tr>
+                          <td>Color Variant</td>
+                          <td>{colorVariants}</td>
                         </tr>
                       
                      
@@ -344,6 +351,10 @@ console.log(category);
                         <tr>
                           <td>Noise Cancellation</td>
                           <td>{noise_cancellation}</td>
+                        </tr>
+                        <tr>
+                          <td>Color Variant</td>
+                          <td>{colorVariants}</td>
                         </tr>
                       
                      
