@@ -429,8 +429,9 @@ const productsData = [
     quantity: 1,
     ratings: 474,
     rateCount: 4,
-    ram:"4GB",
-    internal:"108GB",
+    ram:"12GB",
+    internal:"256GB",
+    color_varient:"Red,Black",
     path: "/product-details/",
   },
   {
@@ -453,6 +454,10 @@ const productsData = [
     quantity: 1,
     ratings: 474,
     rateCount: 4,
+    ram:"8GB",
+    internal:"256GB",
+    color_varient:"Green,Black,Silver",
+
     path: "/product-details/",
   },
   {
@@ -475,6 +480,10 @@ const productsData = [
     quantity: 1,
     ratings: 474,
     rateCount: 4,
+    ram:"6GB",
+    internal:"128GB",
+    color_varient:"Red,Black,Blue",
+
     path: "/product-details/",
   },
   {
@@ -497,6 +506,10 @@ const productsData = [
     quantity: 1,
     ratings: 474,
     rateCount: 4,
+    ram:"8GB",
+    internal:"256GB",
+    color_varient:"Green,Black",
+
     path: "/product-details/",
   },
   {
@@ -520,6 +533,10 @@ const productsData = [
     quantity: 1,
     ratings: 474,
     rateCount: 4,
+    ram:"6GB",
+    internal:"128GB",
+    color_varient:"Green,Red,Silver",
+
     path: "/product-details/",
   },
 
