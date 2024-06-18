@@ -279,6 +279,10 @@ console.log(category);
                           <td>Picture Quality</td>
                           <td>{picture_quality}</td>
                         </tr>
+                        <tr>
+                          <td>Color Variant</td>
+                          <td>{colorVariants}</td>
+                        </tr>
                      
                       </>
                     )}
