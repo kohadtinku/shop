@@ -135,9 +135,9 @@ const productsData = [
     quantity: 1,
     ratings: 836,
     rateCount: 4,
-    battery_life: "10 hours",
     colorVariants: "Red , Black",
-
+    
+    battery_life: "10 hours",
     waterproof: "Yes",
     path: "/product-details/",
   },
@@ -362,6 +362,9 @@ const productsData = [
     releaseDate: "2020-11-15",
     warranty: "1 year",
     colorVariants: "Red , Black",
+    
+    battery_life: "10 hours",
+    waterproof: "Yes",
 
     path: "/product-details/",
   },
@@ -391,6 +394,8 @@ const productsData = [
     warranty: "2 years",
     colorVariants: "Red , Black",
 
+    battery_life: "10 hours",
+    waterproof: "Yes",
     path: "/product-details/",
   },
   {
@@ -419,6 +424,8 @@ const productsData = [
     warranty: "1 year",
     colorVariants: "Red , Black",
 
+    battery_life: "10 hours",
+    waterproof: "Yes",
     path: "/product-details/",
   },
   {
@@ -446,6 +453,9 @@ const productsData = [
     releaseDate: "2021-02-15",
     warranty: "1 year",
     colorVariants: "Red , Black",
+    
+    battery_life: "10 hours",
+    waterproof: "Yes",
 
     path: "/product-details/",
   },
