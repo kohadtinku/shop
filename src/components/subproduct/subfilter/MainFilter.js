@@ -242,7 +242,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import customContext from "../../../contexts/filters/customContext";
 import { displayMoney } from "../../../helpers/utils";
-import productsData from "../../../data/productsData";
+// import productsData from "../../../data/productsData";
 import ProductCard from "../../product/ProductCard";
 import EmptyView from "../../common/EmptyView";
 import { BsExclamationCircle } from "react-icons/bs";
@@ -250,6 +250,27 @@ import priceMenu from "../../../data/filterBarData";
 import '../../../App.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+import {
+  mobileData,
+  earbudsData,
+  earphoneData,
+  laptopData,
+  tvData,
+  headphoneData,
+  neckbandData
+} from "../../../data/productsData";
+
+const allProductsData = [
+  ...mobileData,
+  ...earbudsData,
+  ...earphoneData,
+  ...laptopData,
+  ...tvData,
+  ...headphoneData,
+  ...neckbandData
+];
+
 const MainFIlter = () => {
   useEffect(() => {
     AOS.init({
@@ -272,20 +293,20 @@ const MainFIlter = () => {
 
   useEffect(() => {
     // Filter products with category "Mobile" initially
-    const filteredProducts = productsData.filter(
+    const filteredProducts = allProductsData.filter(
       (product) => product.category === "Mobile"
     );
     setMobileProducts(filteredProducts);
   }, []); // Empty dependency array ensures this effect runs only once on component mount
   const handleLowtoHigh = () => {
     // Sort the filtered products by finalPrice from low to high
-    let sortedProducts = mobileProducts.sort((a, b) => a.finalPrice - b.finalPrice);
+    let sortedProducts = mobileProducts.sort((a, b) => a.finalPrice[0] - b.finalPrice[0]);
     setMobileProducts([...sortedProducts]); // Ensure state immutability
   };
 
   const handleHighToLow = () => {
     // Sort the filtered products by finalPrice from high to low
-    let sortedProducts = mobileProducts.sort((a, b) => b.finalPrice - a.finalPrice);
+    let sortedProducts = mobileProducts.sort((a, b) => b.finalPrice[0] - a.finalPrice[0]);
     setMobileProducts([...sortedProducts]); // Ensure state immutability
   };
 
@@ -301,36 +322,36 @@ const MainFIlter = () => {
     let filteredProducts = [];
 
     // Filter out non-mobile products first
-    const mobileProductsData = productsData.filter(
+    const mobileProductsData = allProductsData.filter(
       (product) => product.category === "Mobile"
     );
 
     switch (value) {
       case "under5000":
         filteredProducts = mobileProductsData.filter(
-          (product) => product.finalPrice < 5000
+          (product) => product.finalPrice[0] < 5000
         );
         break;
       case "5000to10000":
         filteredProducts = mobileProductsData.filter(
-          (product) => product.finalPrice >= 5000 && product.finalPrice <= 10000
+          (product) => product.finalPrice[0] >= 5000 && product.finalPrice[0] <= 10000
         );
         break;
       case "10000to15000":
         filteredProducts = mobileProductsData.filter(
           (product) =>
-            product.finalPrice >= 10000 && product.finalPrice <= 15000
+            product.finalPrice[0] >= 10000 && product.finalPrice[0] <= 15000
         );
         break;
       case "15000to20000":
         filteredProducts = mobileProductsData.filter(
           (product) =>
-            product.finalPrice >= 15000 && product.finalPrice <= 20000
+            product.finalPrice[0] >= 15000 && product.finalPrice[0] <= 20000
         );
         break;
       case "25000andabove":
         filteredProducts = mobileProductsData.filter(
-          (product) => product.finalPrice >= 25000
+          (product) => product.finalPrice[0] >= 25000
         );
         break;
       default:

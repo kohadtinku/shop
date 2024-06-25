@@ -17,7 +17,7 @@ const Cart = () => {
 
     // total original price
     const cartTotal = cartItems.map(item => {
-        return item.originalPrice * item.quantity;
+        return item.originalPrice[0] * item.quantity;
     });
 
     const calculateCartTotal = calculateTotal(cartTotal);
@@ -26,7 +26,7 @@ const Cart = () => {
 
     // total discount
     const cartDiscount = cartItems.map(item => {
-        return (item.originalPrice - item.finalPrice) * item.quantity;
+        return (item.originalPrice[0] - item.finalPrice[0]) * item.quantity;
     });
 
     const calculateCartDiscount = calculateTotal(cartDiscount);
@@ -88,7 +88,7 @@ const Cart = () => {
                                                 <b>{displayTotalAmount}</b>
                                             </div>
                                         </div>
-                                        <button type="button" className="btn checkout_btn">Buy Now</button>
+                                        <button type="button" className="btn checkout_btn">Checkout</button>
                                     </div>
                                 </div>
                             </div>

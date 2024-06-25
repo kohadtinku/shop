@@ -1,12 +1,34 @@
 // src/components/SearchResults.js
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import productsData from "../../data/productsData";
+// import productsData from "../../data/productsData";
+
+import {
+  mobileData,
+  earbudsData,
+  earphoneData,
+  laptopData,
+  tvData,
+  headphoneData,
+  neckbandData
+} from "../../data/productsData";
+
+
+
 import ProductCard from "../product/ProductCard";
 import EmptyView from "../common/EmptyView";
 import { BsExclamationCircle } from "react-icons/bs";
 import AOS from "aos";
 import "aos/dist/aos.css";
+const allProductsData = [
+  ...mobileData,
+  ...earbudsData,
+  ...earphoneData,
+  ...laptopData,
+  ...tvData,
+  ...headphoneData,
+  ...neckbandData
+];
 
 const SearchResults = () => {
   useEffect(() => {
@@ -20,7 +42,7 @@ const SearchResults = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
-    const results = productsData.filter((product) =>
+    const results = allProductsData.filter((product) =>
       product.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredProducts(results);

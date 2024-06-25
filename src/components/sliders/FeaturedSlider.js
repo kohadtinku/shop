@@ -3,17 +3,36 @@ import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, A11y, Autoplay } from 'swiper/modules';
 import { displayMoney } from '../../helpers/utils';
-import productsData from '../../data/productsData';
-
-import 'swiper/scss';
-import 'swiper/scss/autoplay';
-import 'swiper/scss/pagination';
-import "swiper/scss/effect-coverflow";
-
+// import productsData from '../../data/productsData';
+import {
+    mobileData,
+    earbudsData,
+    earphoneData,
+    laptopData,
+    tvData,
+    headphoneData,
+    neckbandData
+  } from "../../data/productsData";
+  
+  
+  import 'swiper/scss';
+  import 'swiper/scss/autoplay';
+  import 'swiper/scss/pagination';
+  import "swiper/scss/effect-coverflow";
+  
+  const allProductsData = [
+    ...mobileData,
+    ...earbudsData,
+    ...earphoneData,
+    ...laptopData,
+    ...tvData,
+    ...headphoneData,
+    ...neckbandData
+  ];
 
 const FeaturedSlider = () => {
 
-    const featuredProducts = productsData.filter(item => item.tag === 'featured-product');
+    const featuredProducts = allProductsData.filter(item => item.tag === 'featured-product');
 
 
     return (
@@ -63,10 +82,14 @@ const FeaturedSlider = () => {
                                     <img src={images[0]} alt="" />
                                 </Link>
                             </figure>
-                            <h2 className="products_price">
-                                {newPrice} &nbsp;
-                                <small><del>{oldPrice}</del></small>
-                            </h2>
+                            <div className="products_price">
+                        
+                                    <div >
+                                        {displayMoney(finalPrice[0])} &nbsp;
+                                        <small><del>{displayMoney(originalPrice[0])}</del></small>
+                                    </div>
+                             
+                            </div>
                         </SwiperSlide>
                     );
                 })

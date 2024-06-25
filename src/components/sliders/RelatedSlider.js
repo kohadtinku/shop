@@ -1,13 +1,32 @@
 import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, A11y } from 'swiper/modules';
-import productsData from '../../data/productsData';
+// import productsData from '../../data/productsData';
 import ProductCard from '../product/ProductCard';
-
-import 'swiper/scss';
-import 'swiper/scss/pagination';
-import AOS from "aos";
-import "aos/dist/aos.css";
+import {
+    mobileData,
+    earbudsData,
+    earphoneData,
+    laptopData,
+    tvData,
+    headphoneData,
+    neckbandData
+  } from "../../data/productsData";
+  
+  import 'swiper/scss';
+  import 'swiper/scss/pagination';
+  import AOS from "aos";
+  import "aos/dist/aos.css";
+  
+  const allProductsData = [
+    ...mobileData,
+    ...earbudsData,
+    ...earphoneData,
+    ...laptopData,
+    ...tvData,
+    ...headphoneData,
+    ...neckbandData
+  ];
 
 
 const RelatedSlider = (props) => {
@@ -21,7 +40,7 @@ const RelatedSlider = (props) => {
 
     const { category } = props;
 
-    const relatedProduct = productsData.filter(item => item.category === category);
+    const relatedProduct = allProductsData.filter(item => item.category === category);
 
     return (
         <Swiper

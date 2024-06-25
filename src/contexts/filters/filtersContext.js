@@ -1,8 +1,26 @@
 import { createContext, useEffect, useReducer } from 'react';
-import productsData from '../../data/productsData';
+// import productsData from '../../data/productsData';
 import { brandsMenu, categoryMenu } from '../../data/filterBarData';
 import filtersReducer from './filtersReducer';
-
+import {
+    mobileData,
+    earbudsData,
+    earphoneData,
+    laptopData,
+    tvData,
+    headphoneData,
+    neckbandData
+  } from "../../data/productsData";
+  
+  const allProductsData = [
+    ...mobileData,
+    ...earbudsData,
+    ...earphoneData,
+    ...laptopData,
+    ...tvData,
+    ...headphoneData,
+    ...neckbandData
+  ];
 // Filters-Context
 const filtersContext = createContext();
 
@@ -14,9 +32,9 @@ const initialState = {
     updatedBrandsMenu: brandsMenu,
     updatedCategoryMenu: categoryMenu,
     selectedPrice: {
-        price: 0,
-        minPrice: 0,
-        maxPrice: 0
+        price: 10000,
+        minPrice: 10000,
+        maxPrice: 1000000
     },
     mobFilterBar: {
         isMobSortVisible: false,
@@ -35,7 +53,7 @@ const FiltersProvider = ({ children }) => {
     useEffect(() => {
 
         // making a shallow copy of the original products data, because we should never mutate the orginal data.
-        const products = [...productsData];
+        const products = [...allProductsData];
 
         // finding the Max and Min Price, & setting them into the state.
         const priceArr = products.map(item => item.finalPrice);
@@ -53,7 +71,7 @@ const FiltersProvider = ({ children }) => {
     /* function for applying Filters - (sorting & filtering) */
     const applyFilters = () => {
 
-        let updatedProducts = [...productsData];
+        let updatedProducts = [...allProductsData];
 
         /*==== Sorting ====*/
         if (state.sortedValue) {
@@ -71,11 +89,11 @@ const FiltersProvider = ({ children }) => {
                     break;
 
                 case 'Price(Lowest First)':
-                    updatedProducts = updatedProducts.sort((a, b) => a.finalPrice - b.finalPrice);
+                    updatedProducts = updatedProducts.sort((a, b) => a.finalPrice[0] - b.finalPrice[0]);
                     break;
 
                 case 'Price(Highest First)':
-                    updatedProducts = updatedProducts.sort((a, b) => b.finalPrice - a.finalPrice);
+                    updatedProducts = updatedProducts.sort((a, b) => b.finalPrice[0] - a.finalPrice[0]);
                     break;
 
                 default:
@@ -106,7 +124,12 @@ const FiltersProvider = ({ children }) => {
         // filter by Price
         if (state.selectedPrice) {
             updatedProducts = updatedProducts.filter(item => {
-                return item.finalPrice <= state.selectedPrice.price;
+                console.log('FINALPRICE: ',item.finalPrice[0])
+                if(item.finalPrice[0] <= state.selectedPrice.price){
+                    return item.finalPrice[0] <= state.selectedPrice.price
+                } else{
+                    return item.finalPrice[1] <= state.selectedPrice.price
+                }
             });
         }
 

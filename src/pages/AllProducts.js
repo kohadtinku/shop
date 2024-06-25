@@ -24,7 +24,7 @@ const AllProducts = () => {
 
                 <div className="container">
                     {
-                        allProducts.length ? (
+                        allProducts ? (
                             <div className="wrapper products_wrapper">
                                 {
                                     allProducts.map(item => (

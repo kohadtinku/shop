@@ -367,7 +367,28 @@ import commonContext from "../../contexts/common/commonContext";
 import cartContext from "../../contexts/cart/cartContext";
 import AccountForm from "../form/AccountForm";
 import logo from "../../assets/ylogo1.png";
-import productsData from "../../data/productsData";
+// import productsData from "../../data/productsData";
+
+
+import {
+  mobileData,
+  earbudsData,
+  earphoneData,
+  laptopData,
+  tvData,
+  headphoneData,
+  neckbandData
+} from "../../data/productsData";
+
+const allProductsData = [
+  ...mobileData,
+  ...earbudsData,
+  ...earphoneData,
+  ...laptopData,
+  ...tvData,
+  ...headphoneData,
+  ...neckbandData
+];
 
 const Header = () => {
   const { formUserInfo, toggleForm, toggleSearch } = useContext(commonContext);
@@ -398,7 +419,7 @@ const Header = () => {
     setSearchTerm(value); // Update the search term
 
     // Filter data for auto-suggestions (case-insensitive)
-    const filteredSuggestions = productsData.filter((item) =>
+    const filteredSuggestions = allProductsData.filter((item) =>
       item.title.toLowerCase().includes(value.toLowerCase())
     );
     setSuggestions(filteredSuggestions);

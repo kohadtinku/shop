@@ -38,8 +38,8 @@ const CartItem = (props) => {
                     </div>
 
                     <h2 className="cart_item_price">
-                        {newPrice} &nbsp;
-                        <small><del>{oldPrice}</del></small>
+                    ₹{finalPrice[0]} &nbsp;
+                        <small><del>₹{originalPrice[0]}</del></small>
                     </h2>
 
                     <QuantityBox itemId={id} itemQuantity={quantity} />

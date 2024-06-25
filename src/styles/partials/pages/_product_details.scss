@@ -14,12 +14,13 @@
 
 .prod_details_left_col {
     // display: grid;
-    grid-template-columns: 0.2fr 1fr;
+    // grid-template-columns: 0.2fr 1fr;
     gap: 1rem;
+    display:flex;
+    height: 500px;
 
     @include devices(sm) {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        flex-direction: column-reverse;
     }
 }
 
@@ -209,3 +210,21 @@
     background-color: white; /* Set background color of the large image to white */
   }
   
+  @media  (max-width:425px) {
+    .cutom_container{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        justify-content: start;
+        align-items: start;
+    }
+    .prod_details_buy_btn{
+        text-align: center;
+
+    }
+    .prod_details_ram_select{
+        padding: 5px;
+        text-align: start;
+    }
+    
+  }

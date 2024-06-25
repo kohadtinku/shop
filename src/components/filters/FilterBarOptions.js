@@ -167,7 +167,11 @@ import filtersContext from '../../contexts/filters/filtersContext';
 import { sortMenu } from '../../data/filterBarData';
 import { displayMoney } from '../../helpers/utils';
 
-const FilterBarOptions = () => {
+const FilterBarOptions = () =>  {
+
+
+
+
     const {
         sortedValue,
         setSortedValue,
@@ -176,15 +180,20 @@ const FilterBarOptions = () => {
         handleBrandsMenu,
         handleCategoryMenu,
         handlePrice,
-        selectedPrice: { price, minPrice, maxPrice },
+        // selectedPrice: { price, minPrice, maxPrice },
         mobFilterBar: { isMobSortVisible, isMobFilterVisible },
         handleMobSortVisibility,
         handleMobFilterVisibility,
         handleClearFilters,
     } = useContext(filtersContext);
 
-    const displayPrice = displayMoney(price);
+ const data = useContext(filtersContext)
+ console.log("mukesh", data);
 
+    const {price, minPrice, maxPrice} = data.selectedPrice
+console.log("price", typeof(price));
+console.log("minprice", minPrice);
+console.log("maxprice", maxPrice);
     const [isApplied, setIsApplied] = useState(false);
 
     const handleApplyFilters = () => {
@@ -296,17 +305,17 @@ const FilterBarOptions = () => {
                 <div className="filter_block">
                     <h4>Price</h4>
                     <div className="price_filter">
-                        <p>{displayPrice}</p>
+                        <p>{+(price)}</p>
                         <input
                             type="range"
-                            min={minPrice}
-                            max={maxPrice}
+                            min={Number(minPrice)}
+                            max={Number(maxPrice)}
                             value={price}
                             onChange={handlePrice}
                         />
                     </div>
                 </div>
-
+{console.log("Min",(minPrice))}
                 <div className="apply_button">
                 <button
                         type="button"

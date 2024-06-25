@@ -3,17 +3,17 @@ const filtersReducer = (state, action) => {
 
         case 'LOAD_ALL_PRODUCTS':
 
-            const { products, minPrice, maxPrice } = action.payload;
+            const { products, } = action.payload;
 
             return {
                 ...state,
                 allProducts: products,
-                selectedPrice: {
-                    ...state.selectedPrice,
-                    price: maxPrice,
-                    minPrice: minPrice,
-                    maxPrice,
-                }
+                // selectedPrice: {
+                //     ...state.selectedPrice,
+                //     price: maxPrice,
+                //     minPrice: minPrice,
+                //     maxPrice,
+                // }
             };
 
 

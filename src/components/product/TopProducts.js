@@ -229,17 +229,36 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 import useActive from "../../hooks/useActive";
-import productsData from "../../data/productsData";
 import ProductCard from "./ProductCard";
+// import productsData from "../../data/productsData";
+import {
+  mobileData,
+  earbudsData,
+  earphoneData,
+  laptopData,
+  tvData,
+  headphoneData,
+  neckbandData
+} from "../../data/productsData";
+
+const allProductsData = [
+  ...mobileData,
+  ...earbudsData,
+  ...earphoneData,
+  ...laptopData,
+  ...tvData,
+  ...headphoneData,
+  ...neckbandData
+];
 
 const TopProducts = () => {
-  const [products, setProducts] = useState(productsData);
+  const [products, setProducts] = useState(allProductsData);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedCompany, setSelectedCompany] = useState("All");
   const { activeClass, handleActive } = useActive(0);
   const productsCategory = [
     "All",
-    ...new Set(productsData.map((item) => item.category)),
+    ...new Set(allProductsData.map((item) => item.category)),
   ];
   const companiesSet = new Set(products.map((item) => item.company));
   const filterCompanies = ["All", ...companiesSet];
@@ -249,7 +268,7 @@ const TopProducts = () => {
   }, [selectedCategory, selectedCompany]);
 
   const filterProducts = () => {
-    let filteredProducts = productsData;
+    let filteredProducts = allProductsData;
     if (selectedCategory !== "All") {
       filteredProducts = filteredProducts.filter(
         (item) => item.category === selectedCategory

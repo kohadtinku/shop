@@ -3,16 +3,35 @@ import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, A11y, Autoplay } from 'swiper/modules';
 import { displayMoney } from '../../helpers/utils';
-import productsData from '../../data/productsData';
-
-import 'swiper/scss';
-import 'swiper/scss/autoplay';
-import 'swiper/scss/pagination';
-
+// import productsData from '../../data/productsData';
+import {
+    mobileData,
+    earbudsData,
+    earphoneData,
+    laptopData,
+    tvData,
+    headphoneData,
+    neckbandData
+  } from "../../data/productsData";
+  
+  
+  import 'swiper/scss';
+  import 'swiper/scss/autoplay';
+  import 'swiper/scss/pagination';
+  
+  const allProductsData = [
+    ...mobileData,
+    ...earbudsData,
+    ...earphoneData,
+    ...laptopData,
+    ...tvData,
+    ...headphoneData,
+    ...neckbandData
+  ];
 
 const HeroSlider = () => {
 
-    const heroProducts = productsData.filter(item => item.tag === 'hero-product');
+    const heroProducts = allProductsData.filter(item => item.tag === 'hero-product');
 
 
     return (
@@ -45,8 +64,8 @@ const HeroSlider = () => {
                                 <h3>{title}</h3>
                                 <h1>{tagline}</h1>
                                 <h2 className="hero_price">
-                                    {newPrice} &nbsp;
-                                    <small><del>{oldPrice}</del></small>
+                                ₹{finalPrice[0]} &nbsp;
+                                    <small><del>₹{originalPrice[0]}</del></small>
                                 </h2>
                                 <Link to={`${path}${id}`} className="btn">Shop Now</Link>
                             </div>

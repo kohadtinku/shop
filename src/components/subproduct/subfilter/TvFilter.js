@@ -11,6 +11,27 @@ import priceMenu from "../../../data/filterBarData";
 import '../../../App.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+import {
+  mobileData,
+  earbudsData,
+  earphoneData,
+  laptopData,
+  tvData,
+  headphoneData,
+  neckbandData
+} from "../../../data/productsData";
+
+const allProductsData = [
+  ...mobileData,
+  ...earbudsData,
+  ...earphoneData,
+  ...laptopData,
+  ...tvData,
+  ...headphoneData,
+  ...neckbandData
+];
+
 const TvFilter = () => {
   useEffect(() => {
     AOS.init({
@@ -32,66 +53,61 @@ const TvFilter = () => {
   const [tvProducts, setTvProducts] = useState([]);
 
   useEffect(() => {
-    // Filter products with category "Mobile" initially
-    const filteredProducts = productsData.filter(
+    const filteredProducts = allProductsData.filter(
       (product) => product.category === "TV"
     );
     setTvProducts(filteredProducts);
-  }, []); // Empty dependency array ensures this effect runs only once on component mount
+  }, []); 
 
 
   const handleLowtoHigh = () => {
-    // Sort the filtered products by finalPrice from low to high
-    let sortedProducts = tvProducts.sort((a, b) => a.finalPrice - b.finalPrice);
+    let sortedProducts = tvProducts.sort((a, b) => a.finalPrice[0] - b.finalPrice[0]);
     setTvProducts([...sortedProducts]); // Ensure state immutability
   };
 
   const handleHighToLow = () => {
-    // Sort the filtered products by finalPrice from high to low
-    let sortedProducts = tvProducts.sort((a, b) => b.finalPrice - a.finalPrice);
+    let sortedProducts = tvProducts.sort((a, b) => b.finalPrice[0] - a.finalPrice[0]);
     setTvProducts([...sortedProducts]); // Ensure state immutability
   };
 
   const handleLatest = () => {
-    // Sort the filtered products by latest upload (assuming products have a `timestamp` property)
     let sortedProducts = tvProducts.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-    setTvProducts([...sortedProducts]); // Ensure state immutability
+    setTvProducts([...sortedProducts]); 
   };
   const handleChange = (event) => {
     const { value } = event.target;
     let filteredProducts = [];
 
-    // Filter out non-mobile products first
-    const TVProductsData = productsData.filter(
+    const TVProductsData = allProductsData.filter(
       (product) => product.category === "TV"
     );
 
     switch (value) {
       case "under5000":
         filteredProducts = TVProductsData.filter(
-          (product) => product.finalPrice < 5000
+          (product) => product.finalPrice[0] < 5000
         );
         break;
       case "5000to10000":
         filteredProducts = TVProductsData.filter(
-          (product) => product.finalPrice >= 5000 && product.finalPrice <= 10000
+          (product) => product.finalPrice[0] >= 5000 && product.finalPrice[0] <= 10000
         );
         break;
       case "10000to15000":
         filteredProducts = TVProductsData.filter(
           (product) =>
-            product.finalPrice >= 10000 && product.finalPrice <= 15000
+            product.finalPrice[0] >= 10000 && product.finalPrice[0] <= 15000
         );
         break;
       case "15000to20000":
         filteredProducts = TVProductsData.filter(
           (product) =>
-            product.finalPrice >= 15000 && product.finalPrice <= 20000
+            product.finalPrice[0] >= 15000 && product.finalPrice[0] <= 20000
         );
         break;
       case "25000andabove":
         filteredProducts = TVProductsData.filter(
-          (product) => product.finalPrice >= 25000
+          (product) => product.finalPrice[0] >= 25000
         );
         break;
       default:
