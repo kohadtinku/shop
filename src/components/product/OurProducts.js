@@ -34,7 +34,7 @@ const OurProducts = () => {
 
 
       <div className="wrapper products_wrapper">
-        {products.slice(0, 12).map((item) => (
+        {products.slice(0, 20).map((item) => (
           <ProductCard key={item.id} {...item} />
         ))}
         <div

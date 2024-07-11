@@ -14,6 +14,7 @@ import Earbuds from '../components/subproduct/Earbuds';
 import Neckband from '../components/subproduct/Neckband';
 import SearchResults from '../components/search/SearchResults';
 import BreadCrumbs from '../components/breadcrumbs/BreadCrumbs';
+import CheckoutPage from '../components/form/CheckoutPage';
 
 const RouterRoutes = () => {
   useScrollRestore();
@@ -40,6 +41,7 @@ const RouterRoutes = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/product-details/:productId" element={<ProductDetails />} />
         <Route path="/search/:searchTerm" element={<SearchResults />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
 
         {/* Subproduct routes */}
         <Route path="/mobile" element={<Mobile />} />

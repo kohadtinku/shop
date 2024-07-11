@@ -675,6 +675,8 @@ const ProductDetails = () => {
   const [oldPrice, setOldPrice] = useState(originalPrice[0]);
   const [iscolor, setIsColor] = useState(color[0]);
 
+  const [newcolor, setNewColor] = useState("");
+
   const [selectedRam, setSelectedRam] = useState(
     category === "Mobile" ? ram[0] : ""
   );
@@ -702,11 +704,14 @@ const ProductDetails = () => {
   const handleColor = (e) => {
     const selectColor = e.target.value;
     setIsColor(selectColor);
+    localStorage.setItem("color", selectColor);
   };
 
   // Handler for adding item to cart
   const handleAddItem = () => {
-    addItem(product);
+    console.log("colorrr", iscolor);
+    console.log("cart-products", product);
+    addItem({...product,color:iscolor,ram:selectedRam ,finalPrice:newPrice,originalPrice:oldPrice});
   };
 
   // Calculating discounted price and formatting displayed prices
@@ -809,6 +814,7 @@ const ProductDetails = () => {
                         id="ram-select"
                         value={selectedRam}
                         onChange={handleRamChange}
+                        onClick={()=>setSelectedRam(selectedRam)}
                         style={{ padding: "5px", marginLeft: "5px" }}
                       >
                         {ram.map((ramSize, index) => (
@@ -818,7 +824,7 @@ const ProductDetails = () => {
                         ))}
                       </select>
                     </div>
-
+{console.log("selected ram",selectedRam)}
                     <div className="separator"></div>
                   </>
                 )}
@@ -851,7 +857,10 @@ const ProductDetails = () => {
                     onChange={handleColor}
                     value={iscolor}
                     style={{ padding: "5px", marginLeft: "5px" }}
+                    onClick={() => setNewColor(iscolor)}
                   >
+                    {console.log("color", iscolor)}
+
                     {color.map((c, index) => (
                       <option key={index} value={c}>
                         {c}

@@ -6,8 +6,11 @@ import Footer from "./components/common/Footer";
 import BackTop from "./components/common/BackTop";
 import { FiltersProvider } from "./contexts/filters/filtersContext";
 import { CustomFiltersProvider } from "./contexts/filters/customContext";
+import { useState } from "react";
 
 const App = () => {
+const [dbPath,setDbPath] = useState("")
+
   return (
     <>
     <CustomFiltersProvider>
