@@ -24,7 +24,7 @@
   }
   
   .breadcrumb-item + .breadcrumb-item::before {
-    content: '>>';
+    content: '/';
     padding-right: 5px;
     color: #6c757d;
   }
