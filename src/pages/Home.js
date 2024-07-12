@@ -16,7 +16,6 @@ const Home = () => {
   useEffect(() => {
     AOS.init({
       duration: 2000, // Animation duration
-      // easing: 'ease-in-out', // Animation easing
     });
   }, []);
   return (
@@ -40,7 +39,7 @@ const Home = () => {
             }}
             data-aos="fade-down"
           >
-            <h1>Categories</h1>
+            <h1 >Categories</h1>
             {/* <TopBarProducts/> */}
             <TopSlider />
           </div>
@@ -73,7 +72,7 @@ const Home = () => {
         <Services />
       </main>
 
-    
+
     </>
   );
 };

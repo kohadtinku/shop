@@ -1,11 +1,12 @@
 .breadcrumb {
     padding: 10px 0;
-    background-color: #f3f8ff;
+    /* background-color: #f3f8f8; */
     border-bottom: 1px solid #dee2e6;
+    /* text-decoration: underline; */
     margin-top: 80px;
     display: flex;
     width: fit-content;
-    border-radius: 10px ;
+    /* border-radius: 10px ; */
     /* gap:5px; */
     padding: 10px;
   }
