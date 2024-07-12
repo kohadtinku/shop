@@ -133,6 +133,18 @@ const ProductDetails = () => {
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
   });
+
+  // const goToNextImage = () => {
+  //   const currentIndex = images.indexOf(previewImg);
+  //   const nextIndex = (currentIndex + 1) % images.length;
+  //   setPreviewImg(images[nextIndex]);
+  // };
+
+  // const goToPrevImage = () => {
+  //   const currentIndex = images.indexOf(previewImg);
+  //   const prevIndex = (currentIndex - 1 + images.length) % images.length;
+  //   setPreviewImg(images[prevIndex]);
+  // }
   return (
     <>
       <section id="product_details" className="section">
@@ -171,6 +183,15 @@ const ProductDetails = () => {
               <figure className="prod_details_img">
                 <img src={previewImg} alt="product-img" />
               </figure>
+
+              {/* <div className="image-navigation">
+                <button className="prev-button" onClick={goToPrevImage}>
+                  &lt; Prev
+                </button>
+                <button className="next-button" onClick={goToNextImage}>
+                  Next &gt;
+                </button>
+              </div> */}
             </div>
 
             {/*=== Product Details Right-content ===*/}
