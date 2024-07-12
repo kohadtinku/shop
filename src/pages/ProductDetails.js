@@ -35,7 +35,7 @@ const allProductsData = [
 const ProductDetails = () => {
   useDocTitle("Product Details");
 
-  const { handleActive, activeClass } = useActive(0);
+  // const { handleActive, activeClass } = useActive(0);
   const { addItem } = useContext(cartContext);
   const { productId } = useParams();
 
@@ -74,7 +74,7 @@ const ProductDetails = () => {
   // Effect to reset image preview and active tab on image change
   useEffect(() => {
     setPreviewImg(images[0]);
-    handleActive(0);
+   
   }, [images]);
 
   // Handler for RAM selection change
@@ -145,6 +145,12 @@ const ProductDetails = () => {
   //   const prevIndex = (currentIndex - 1 + images.length) % images.length;
   //   setPreviewImg(images[prevIndex]);
   // }
+
+
+
+  const activeClass = (index) => {
+    return previewImg === images[index] ? 'active' : '';
+  };
   return (
     <>
       <section id="product_details" className="section">
