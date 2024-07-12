@@ -3,10 +3,10 @@
 // }
 
 .cart_wrapper {
-    display: grid;
-    grid-template-columns: 1fr 0.5fr;
-    align-items: start;
-    gap: 4rem;
+    display: flex;
+    // grid-template-columns: 1fr 0.5fr;
+    // align-items: start;
+    // gap: 4rem;
 
     .quantity_box {
         transform: scale(0.9);
@@ -20,6 +20,14 @@
     @include devices(lg) {
         grid-template-columns: 1fr;
     }
+}
+
+@media (max-width:425px) {
+    .cart_wrapper{
+        flex-direction: column;
+        width: 200vw;
+    }
+    
 }
 
 .cart_left_col {

@@ -711,7 +711,13 @@ const ProductDetails = () => {
   const handleAddItem = () => {
     console.log("colorrr", iscolor);
     console.log("cart-products", product);
-    addItem({...product,color:iscolor,ram:selectedRam ,finalPrice:newPrice,originalPrice:oldPrice});
+    addItem({
+      ...product,
+      color: iscolor,
+      ram: selectedRam,
+      finalPrice: newPrice,
+      originalPrice: oldPrice,
+    });
   };
 
   // Calculating discounted price and formatting displayed prices
@@ -814,7 +820,7 @@ const ProductDetails = () => {
                         id="ram-select"
                         value={selectedRam}
                         onChange={handleRamChange}
-                        onClick={()=>setSelectedRam(selectedRam)}
+                        onClick={() => setSelectedRam(selectedRam)}
                         style={{ padding: "5px", marginLeft: "5px" }}
                       >
                         {ram.map((ramSize, index) => (
@@ -824,7 +830,7 @@ const ProductDetails = () => {
                         ))}
                       </select>
                     </div>
-{console.log("selected ram",selectedRam)}
+                    {console.log("selected ram", selectedRam)}
                     <div className="separator"></div>
                   </>
                 )}
