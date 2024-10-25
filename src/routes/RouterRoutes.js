@@ -15,6 +15,8 @@ import Neckband from '../components/subproduct/Neckband';
 import SearchResults from '../components/search/SearchResults';
 import BreadCrumbs from '../components/breadcrumbs/BreadCrumbs';
 import CheckoutPage from '../components/form/CheckoutPage';
+import LoginPage from '../components/form/LoginPage';
+import SignupPage from '../components/form/SignupPage';
 
 const RouterRoutes = () => {
   useScrollRestore();
@@ -37,6 +39,9 @@ const RouterRoutes = () => {
       <BreadCrumbs crumbs={crumbs} />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        
         <Route path="/all-products" element={<AllProducts />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/product-details/:productId" element={<ProductDetails />} />

@@ -1,12 +1,12 @@
 // CheckoutPage.js
 
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { displayMoney, calculateTotal } from "../../helpers/utils";
 import cartContext from "../../contexts/cart/cartContext";
 import CartItem from "../cart/CartItem";
-import './CheckoutPage.css';
-import useDocTitle from '../../hooks/useDocTitle';
+import "./CheckoutPage.css";
+import useDocTitle from "../../hooks/useDocTitle";
 
 const CheckoutPage = () => {
   useDocTitle("Cart");
@@ -14,11 +14,13 @@ const CheckoutPage = () => {
   const { cartItems, removeItem } = useContext(cartContext);
   const cartQuantity = cartItems.length;
 
-  const cartTotal = cartItems.map(item => item.originalPrice * item.quantity);
+  const cartTotal = cartItems.map((item) => item.originalPrice * item.quantity);
   const calculateCartTotal = calculateTotal(cartTotal);
   const displayCartTotal = displayMoney(calculateCartTotal);
 
-  const cartDiscount = cartItems.map(item => (item.originalPrice - item.finalPrice) * item.quantity);
+  const cartDiscount = cartItems.map(
+    (item) => (item.originalPrice - item.finalPrice) * item.quantity
+  );
   const calculateCartDiscount = calculateTotal(cartDiscount);
   const displayCartDiscount = displayMoney(calculateCartDiscount);
 
@@ -26,11 +28,11 @@ const CheckoutPage = () => {
   const displayTotalAmount = displayMoney(totalAmount);
 
   const [formData, setFormData] = useState({
-    customerName: '',
-    address: '',
-    mobile: '',
-    state: '',
-    city: '',
+    customerName: "",
+    address: "",
+    mobile: "",
+    state: "",
+    city: "",
   });
 
   const handleChange = (e) => {
@@ -53,8 +55,12 @@ const CheckoutPage = () => {
         <div className="product-details">
           <h3>Product Details</h3>
           <div className="cart-items">
-            {cartItems.map(item => (
-              <CartItem key={item.id} {...item} removeItem={removeItem} />
+            {cartItems.map((item) => (
+              <CartItem key={item.id} {...item} removeItem={removeItem}>
+                <div className="quantity-display">
+                  <strong>Quantity:</strong> {item.quantity}
+                </div>
+              </CartItem>
             ))}
           </div>
         </div>
@@ -116,13 +122,16 @@ const CheckoutPage = () => {
             />
           </label>
         </div>
-        <button type="submit" className="submit-btn">Place Order</button>
+        <button type="submit" className="submit-btn">
+          Place Order
+        </button>
       </form>
       <section id="order-summary" className="section">
         <div className="container">
           <div className="order-summary">
             <h3>
-              Order Summary &nbsp; ({cartQuantity} {cartQuantity > 1 ? "items" : "item"})
+              Order Summary &nbsp; ({cartQuantity}{" "}
+              {cartQuantity > 1 ? "items" : "item"})
             </h3>
             <div className="order-summary-details">
               <div className="price">
@@ -139,7 +148,9 @@ const CheckoutPage = () => {
               </div>
               <div className="separator"></div>
               <div className="total-price">
-                <b><small>Total Price</small></b>
+                <b>
+                  <small>Total Price</small>
+                </b>
                 <b>{displayTotalAmount}</b>
               </div>
             </div>

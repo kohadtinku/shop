@@ -494,10 +494,14 @@ const Header = () => {
               </div>
 
               <div className="user_action">
+                <Link to='/login'>
                 <span>
                   <AiOutlineUser />
                 </span>
-                <div className="dropdown_menu">
+                </Link>
+                
+                {/* <p>Login</p> */}
+                {/* <div className="dropdown_menu">
                   <h4>
                     Hello!{" "}
                     {formUserInfo && <Link to="*">&nbsp;{formUserInfo}</Link>}
@@ -519,13 +523,13 @@ const Header = () => {
                       );
                     })}
                   </ul>
-                </div>
+                </div> */}
               </div>
             </nav>
           </div>
         </div>
       </header>
-      <AccountForm />
+      {/* <AccountForm /> */}
       {searchTerm.trim() !== "" && (
         <div>
           <h2>Search Results</h2>

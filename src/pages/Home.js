@@ -39,15 +39,13 @@ const Home = () => {
             }}
             data-aos="fade-down"
           >
-            <h1 >Categories</h1>
             {/* <TopBarProducts/> */}
             <TopSlider />
           </div>
         </section>
         <section id="products" className="section">
           <div className="container" data-aos="zoom-in">
-            {/* <SectionsHead heading="Top Products" /> */}
-            {/* <TopProducts /> */}
+           
             <OurProducts />
           </div>
         </section>
